@@ -40,7 +40,11 @@
     },
     {
       "url": "https://tw-event.beanfun.com/Mabinogi/EventAD/EventAD.aspx?EventADID=18924",
-      "endDate": "2026-08-27"
+      "endDate": "2026-08-27",
+      "isExtension": true,
+      "note": "官方公告延長活動至 08/27",
+      "sourceLabel": "官方公告",
+      "sourceUrl": "https://mabinogi.beanfun.com/News?catId=inside&bid=82402"
     }
   ]
 }
