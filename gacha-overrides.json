@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "include": [
+    {
+      "url": "https://tw-event.beanfun.com/mabinogi/EventAD/EventAD.aspx?EventADID=18930",
+      "reason": "紅利商城轉蛋機率表"
+    }
+  ],
+  "exclude": []
+}
