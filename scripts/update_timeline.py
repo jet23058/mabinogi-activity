@@ -214,6 +214,7 @@ def crawl_kr(client, archive, today):
             if start >= 0:
                 body = body[start:]
             body = body.split("주소복사")[0]
+            row["text"] = body
             row["releaseDate"] = release_date(row["title"], body, row["publishedDate"])
             row["checkedDate"] = today
     return sorted(rows.values(), key=lambda r: (r["publishedDate"], r["url"]))
@@ -340,17 +341,28 @@ def write(path, value):
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--research", action="store_true", help="Extract features from bodies and cross-match TW evidence with AI")
     parser.add_argument("--offline", action="store_true", help="Build from saved source archive without network")
     parser.add_argument("--cache-dir", default=str(ROOT / ".cache/timeline"))
     parser.add_argument("--today", default=datetime.now(timezone.utc).astimezone(__import__("zoneinfo").ZoneInfo("Asia/Taipei")).date().isoformat())
     args = parser.parse_args()
+    ai = None
+    if args.research and not args.offline:
+        from research_timeline import AI
+        ai = AI(args.cache_dir)
     catalog = read(ROOT / "timeline/curated.json", {})
     archive = read(ROOT / "timeline/source-index.json", {"kr": [], "tw": []})
     if not args.offline:
         client = Client(args.cache_dir)
         # Do not publish or overwrite the last good data on a crawl/parser failure.
         archive = {"kr": crawl_kr(client, archive["kr"], args.today), "tw": crawl_tw(client, archive["tw"], args.today)}
+    findings = []
+    if ai:
+        from research_timeline import research
+        catalog, findings, state = research(catalog, archive, client, ai, read(ROOT / "timeline/research-state.json", {}), args.today)
+        write(ROOT / "timeline/research-state.json", state)
     result = build(catalog, archive["kr"], archive["tw"], args.today)
+    result["reviewQueue"].extend(findings)
     assert result["events"], "Refusing to publish an empty timeline"
     localizer = Localizer(read(ROOT / "timeline/localization.json", {}),
                           read(ROOT / "timeline/translations.json", {}), offline=args.offline)

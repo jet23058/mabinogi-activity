@@ -10,7 +10,7 @@
 
 時間軸採 `selectionPolicy.mode = curated-features`，每筆代表一項具體功能、劇情章節、改版階段或合作活動。例如 NEW RISE 第1波、生產配方收藏、喀輪巴斯深淵難度，而非每週的「正式伺服器更新內容公告」。
 
-- `events` 只從 `timeline/curated.json` 產生；不自動把抓到的公告變成卡片。
+- `timeline/curated.json` 是已確認的基準與人工修正；AI讀取韓版公告內文，拆解具體功能，提供逐字證據後自動增補 `events`，不以公告標題當作功能。
 - 每週例行更新公告仍保存在 `timeline/source-index.json` 作為證據，可以用同一份公告支援多個具體功能。
 - 尚未收錄的具體公告先進入 `reviewQueue`，整理成有意義的功能項目並補上來源後，再加入 `curated.json`。
 - 四種分類維持「劇情大項目、改版大項目、小項目、合作」；同一主線或改版階段可使用相同 `groupId`。
@@ -58,3 +58,24 @@ python scripts/update_timeline.py
 ```
 
 `--offline` 使用已保存的來源索引、詞庫與翻譯快取，完全不連外。`--today YYYY-MM-DD` 可固定資料日期以重現輸出。
+
+
+## 公告內文研究流程
+
+Action 使用 `--research`：
+
+1. 保存韓版正式公告完整文字，依內容雜湊快取功能提取結果。一篇每週公告可拆出多個功能；例行維護、商城與零碎修BUG不列入。
+2. 讀取台版公告內文，並追蹤官方 EventAD／月份改善事項連結，取得實際指南內容。
+3. AI以功能內容與官方繁中名稱找到候選文章，再逐篇比對。實裝日須有來源原文引用與完整日期，程式驗證引用確實存在，不能使用固定落差或關鍵字命中直接判定。
+4. 保留既有人工日期、部分對應與G27日期待確認等註記；AI新發現的候選修正列入待核對資料。
+5. 新功能自動加入輸出；資料不足保持待確認，查證結果以 `research-state.json` 與 Actions 快取避免重複請求。失敗不覆蓋已發布JSON。
+
+需要在此儲存庫的 Settings → Secrets and variables → Actions 設定：
+
+- Secret `TIMELINE_AI_API_KEY`，或沿用 `GEMINI_API_KEY`。
+- 可選 Variables：`TIMELINE_AI_BASE_URL`、`TIMELINE_AI_MODEL`，支援 OpenAI 相容的 HTTPS Chat Completions 服務。
+- 預設使用 Gemini 官方相容端點與 `gemini-3.8-flash`；可指定其他供應商與模型。
+
+只送出公開官方公告及詞庫。缺少金鑰會在設定檢查步驟明確失敗，不會把「僅爬完資料」宣稱成研究完成。首次回補需分析2025年起的公告，後續以內容與台版來源指紋快取增量更新。API用量依供應商方案計費。
+
+研究測試使用模型替身，驗證提取、台版匹配、逐字證據、日期與快取；它不代表已完成真實供應商的端到端驗證。

@@ -44,6 +44,11 @@ jobs:
           python-version: '3.13'
       - name: Test parsing, classification and evidence validation
         run: python -m unittest discover -s tests -v
+      - name: Verify research model configuration
+        if: github.event_name != 'pull_request'
+        env:
+          TIMELINE_AI_API_KEY: ${{ secrets.TIMELINE_AI_API_KEY || secrets.GEMINI_API_KEY }}
+        run: python -c "from scripts.research_timeline import AI; AI('.cache/timeline')"
       - name: Restore official-page cache
         if: github.event_name != 'pull_request'
         uses: actions/cache/restore@v4
@@ -51,9 +56,13 @@ jobs:
           path: .cache/timeline
           key: timeline-v1-${{ runner.os }}-${{ github.run_id }}
           restore-keys: timeline-v1-${{ runner.os }}-
-      - name: Refresh official sources and generate JSON
+      - name: Read official bodies, extract features and research TW releases
         if: github.event_name != 'pull_request'
-        run: python scripts/update_timeline.py
+        env:
+          TIMELINE_AI_API_KEY: ${{ secrets.TIMELINE_AI_API_KEY || secrets.GEMINI_API_KEY }}
+          TIMELINE_AI_BASE_URL: ${{ vars.TIMELINE_AI_BASE_URL }}
+          TIMELINE_AI_MODEL: ${{ vars.TIMELINE_AI_MODEL }}
+        run: python scripts/update_timeline.py --research
       - name: Validate catalog offline for pull requests
         if: github.event_name == 'pull_request'
         run: python scripts/update_timeline.py --offline
@@ -73,7 +82,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add update-timeline.json timeline/source-index.json timeline/translations.json
+          git add update-timeline.json timeline/source-index.json timeline/translations.json timeline/research-state.json
           if git diff --cached --quiet; then
             echo 'Timeline is unchanged.'
           else
