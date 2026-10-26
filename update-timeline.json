@@ -30,23 +30,25 @@
   "groups": [
     {
       "id": "new-rise",
-      "title": "NEW RISE",
+      "title": "NEW RISE（嶄新冒險）",
       "category": "major",
       "krStartDate": "2025-07-10",
       "krEndDate": "2025-07-10",
       "eventIds": [
         "new-rise-1"
-      ]
+      ],
+      "originalTitle": "NEW RISE"
     },
     {
       "id": "new-life",
-      "title": "NEW LIFE",
+      "title": "NEW LIFE（新生活）",
       "category": "major",
       "krStartDate": "2025-12-11",
       "krEndDate": "2025-12-11",
       "eventIds": [
         "new-life-1"
-      ]
+      ],
+      "originalTitle": "NEW LIFE"
     },
     {
       "id": "g28",
@@ -57,24 +59,26 @@
       "eventIds": [
         "g28-part1",
         "g28-part2"
-      ]
+      ],
+      "originalTitle": "G28 暮色的殘虛"
     },
     {
       "id": "reaction",
-      "title": "RE:ACTION",
+      "title": "RE:ACTION（再次行動，暫譯）",
       "category": "major",
       "krStartDate": "2026-07-09",
       "krEndDate": "2026-08-13",
       "eventIds": [
         "reaction-1",
         "reaction-2"
-      ]
+      ],
+      "originalTitle": "RE:ACTION"
     }
   ],
   "events": [
     {
       "id": "kr-4892499",
-      "title": "1/9(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "1/9（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -84,7 +88,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892499",
-            "title": "1/9(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "1/9（四） 正式伺服器更新內容公告",
+            "originalTitle": "1/9(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -97,11 +102,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "1/9(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892509",
-      "title": "[수정] 1/16(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 1/16（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -111,7 +122,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892509",
-            "title": "[수정] 1/16(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 1/16（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 1/16(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -124,11 +136,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 1/16(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892520",
-      "title": "[적용됨] 브리 레흐 던전 업데이트",
+      "title": "[已套用] 布里萊赫 地下城 更新",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -138,7 +156,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892520",
-            "title": "[적용됨] 브리 레흐 던전 업데이트"
+            "title": "[已套用] 布里萊赫 地下城 更新",
+            "originalTitle": "[적용됨] 브리 레흐 던전 업데이트"
           }
         ]
       },
@@ -151,11 +170,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[적용됨] 브리 레흐 던전 업데이트",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892531",
-      "title": "1/23(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "1/23（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -165,7 +190,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892531",
-            "title": "1/23(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "1/23（四） 正式伺服器更新內容公告",
+            "originalTitle": "1/23(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -178,11 +204,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "1/23(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892547",
-      "title": "1/31(금) 정식 서버 패치 작업 변경점 안내",
+      "title": "1/31（五） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -192,7 +224,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892547",
-            "title": "1/31(금) 정식 서버 패치 작업 변경점 안내"
+            "title": "1/31（五） 正式伺服器更新內容公告",
+            "originalTitle": "1/31(금) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -205,11 +238,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "1/31(금) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892553",
-      "title": "[수정] 2/6(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 2/6（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -219,7 +258,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892553",
-            "title": "[수정] 2/6(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 2/6（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 2/6(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -232,11 +272,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 2/6(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892566",
-      "title": "2/13(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "2/13（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -246,7 +292,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892566",
-            "title": "2/13(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "2/13（四） 正式伺服器更新內容公告",
+            "originalTitle": "2/13(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -259,11 +306,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "2/13(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892577",
-      "title": "[수정] 2/20(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 2/20（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -273,7 +326,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892577",
-            "title": "[수정] 2/20(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 2/20（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 2/20(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -286,11 +340,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 2/20(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892606",
-      "title": "[수정] 2/27(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 2/27（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -300,7 +360,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892606",
-            "title": "[수정] 2/27(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 2/27（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 2/27(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -313,11 +374,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 2/27(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892623",
-      "title": "3/6(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "3/6（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -327,7 +394,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892623",
-            "title": "3/6(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "3/6（四） 正式伺服器更新內容公告",
+            "originalTitle": "3/6(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -340,7 +408,13 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "3/6(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "dungeon-entry",
@@ -354,7 +428,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892645",
-            "title": "地下城入場方式調整"
+            "title": "地下城入場方式調整",
+            "originalTitle": "地下城入場方式調整"
           }
         ]
       },
@@ -366,11 +441,17 @@
         "candidateSources": []
       },
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "地下城入場方式調整",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "original",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892643",
-      "title": "[수정] 3/13(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 3/13（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -380,7 +461,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892643",
-            "title": "[수정] 3/13(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 3/13（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 3/13(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -393,11 +475,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 3/13(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892655",
-      "title": "[수정] 3/20(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 3/20（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -407,7 +495,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892655",
-            "title": "[수정] 3/20(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 3/20（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 3/20(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -420,11 +509,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 3/20(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892674",
-      "title": "[수정] 3/27(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 3/27（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -434,7 +529,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892674",
-            "title": "[수정] 3/27(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 3/27（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 3/27(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -447,11 +543,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 3/27(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892689",
-      "title": "[수정] 4/3(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 4/3（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -461,7 +563,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892689",
-            "title": "[수정] 4/3(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 4/3（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 4/3(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -474,11 +577,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 4/3(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "sacred-guard",
-      "title": "神聖盾衛技能改善",
+      "title": "聖盾守衛技能改善",
       "category": "minor",
       "groupId": null,
       "needsReview": false,
@@ -488,7 +597,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892694",
-            "title": "神聖盾衛技能改善"
+            "title": "聖盾守衛技能改善",
+            "originalTitle": "聖盾守衛技能改善"
           }
         ]
       },
@@ -497,14 +607,71 @@
         "status": "pending",
         "sources": [],
         "label": "尚未找到台版公告（待確認）",
-        "candidateSources": []
+        "candidateSources": [
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=74495",
+            "title": "《新瑪奇》25年6月改版內容預告",
+            "publishedDate": "2025-06-10"
+          },
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=74605",
+            "title": "《新瑪奇》0619(四) 版本更新開機公告",
+            "publishedDate": "2025-06-20"
+          },
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=74608",
+            "title": "《秘法R3聖盾守衛》",
+            "publishedDate": "2025-06-20"
+          },
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=74683",
+            "title": "《新瑪奇》0626(四) 例行維護開機公告(18:22更新)",
+            "publishedDate": "2025-06-26"
+          },
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=74732",
+            "title": "《新瑪奇》0703(四) 例行維護開機公告",
+            "publishedDate": "2025-07-03"
+          },
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=74801",
+            "title": "《新瑪奇》0710(四) 例行維護開機公告",
+            "publishedDate": "2025-07-10"
+          },
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=83710",
+            "title": "《新瑪奇》09/17(四) 改版作業開機公告",
+            "publishedDate": "2026-09-17"
+          },
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=83792",
+            "title": "《新瑪奇》09/24(四) 例行維護開機公告",
+            "publishedDate": "2026-09-24"
+          },
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=83837",
+            "title": "《新瑪奇》10/01(四) 例行維護開機公告",
+            "publishedDate": "2026-10-01"
+          },
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=83899",
+            "title": "《新瑪奇》10/08(四) 例行維護開機公告",
+            "publishedDate": "2026-10-08"
+          }
+        ]
       },
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "聖盾守衛技能改善",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "original",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892699",
-      "title": "[수정] 4/10(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 4/10（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -514,7 +681,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892699",
-            "title": "[수정] 4/10(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 4/10（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 4/10(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -527,11 +695,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 4/10(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892715",
-      "title": "[수정] 4/17(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 4/17（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -541,7 +715,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892715",
-            "title": "[수정] 4/17(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 4/17（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 4/17(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -554,11 +729,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 4/17(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892730",
-      "title": "4/24(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "4/24（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -568,7 +749,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892730",
-            "title": "4/24(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "4/24（四） 正式伺服器更新內容公告",
+            "originalTitle": "4/24(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -581,11 +763,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "4/24(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892742",
-      "title": "4/29(화) 정식 서버 패치 작업 변경점 안내",
+      "title": "4/29（二） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -595,7 +783,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892742",
-            "title": "4/29(화) 정식 서버 패치 작업 변경점 안내"
+            "title": "4/29（二） 正式伺服器更新內容公告",
+            "originalTitle": "4/29(화) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -608,11 +797,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "4/29(화) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892757",
-      "title": "[수정] 5/8(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 5/8（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -622,7 +817,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892757",
-            "title": "[수정] 5/8(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 5/8（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 5/8(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -635,11 +831,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 5/8(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892765",
-      "title": "[수정] 5/15(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 5/15（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -649,7 +851,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892765",
-            "title": "[수정] 5/15(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 5/15（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 5/15(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -662,11 +865,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 5/15(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892788",
-      "title": "5/22(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "5/22（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -676,7 +885,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892788",
-            "title": "5/22(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "5/22（四） 正式伺服器更新內容公告",
+            "originalTitle": "5/22(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -689,11 +899,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "5/22(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892800",
-      "title": "5/29(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "5/29（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -703,7 +919,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892800",
-            "title": "5/29(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "5/29（四） 正式伺服器更新內容公告",
+            "originalTitle": "5/29(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -716,11 +933,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "5/29(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892806",
-      "title": "[수정] 6/5(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 6/5（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -730,7 +953,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892806",
-            "title": "[수정] 6/5(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 6/5（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 6/5(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -743,11 +967,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 6/5(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892817",
-      "title": "[수정] 6/12(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 6/12（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -757,7 +987,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892817",
-            "title": "[수정] 6/12(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 6/12（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 6/12(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -770,11 +1001,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 6/12(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892826",
-      "title": "[수정] 6/19(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 6/19（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -784,7 +1021,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892826",
-            "title": "[수정] 6/19(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 6/19（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 6/19(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -797,11 +1035,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 6/19(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892843",
-      "title": "[수정] 6/26(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 6/26（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -811,7 +1055,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892843",
-            "title": "[수정] 6/26(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 6/26（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 6/26(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -824,11 +1069,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 6/26(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892858",
-      "title": "7/3(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "7/3（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -838,7 +1089,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892858",
-            "title": "7/3(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "7/3（四） 正式伺服器更新內容公告",
+            "originalTitle": "7/3(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -851,11 +1103,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "7/3(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892875",
-      "title": "7/10(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "7/10（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -865,7 +1123,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892875",
-            "title": "7/10(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "7/10（四） 正式伺服器更新內容公告",
+            "originalTitle": "7/10(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -878,11 +1137,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "7/10(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "new-rise-1",
-      "title": "NEW RISE 第一階段",
+      "title": "NEW RISE（嶄新冒險） 第一階段",
       "category": "major",
       "groupId": "new-rise",
       "needsReview": false,
@@ -892,7 +1157,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892882",
-            "title": "NEW RISE 第一階段"
+            "title": "NEW RISE（嶄新冒險） 第一階段",
+            "originalTitle": "NEW RISE 第一階段"
           }
         ]
       },
@@ -965,11 +1231,17 @@
         ]
       },
       "categoryLabel": "改版大項目",
-      "importance": "major"
+      "importance": "major",
+      "originalTitle": "NEW RISE 第一階段",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892896",
-      "title": "[수정] 7/17(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 7/17（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -979,7 +1251,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892896",
-            "title": "[수정] 7/17(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 7/17（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 7/17(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -992,11 +1265,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 7/17(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892907",
-      "title": "[수정] 7/24(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 7/24（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1006,7 +1285,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892907",
-            "title": "[수정] 7/24(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 7/24（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 7/24(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1019,11 +1299,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 7/24(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892924",
-      "title": "[수정] 7/31(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 7/31（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1033,7 +1319,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892924",
-            "title": "[수정] 7/31(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 7/31（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 7/31(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1046,11 +1333,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 7/31(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892937",
-      "title": "[수정1] 8/7(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正1] 8/7（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1060,7 +1353,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892937",
-            "title": "[수정1] 8/7(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正1] 8/7（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정1] 8/7(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1073,11 +1367,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정1] 8/7(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892951",
-      "title": "[수정] 8/12(화) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 8/12（二） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1087,7 +1387,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892951",
-            "title": "[수정] 8/12(화) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 8/12（二） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 8/12(화) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1100,11 +1401,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 8/12(화) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "forbidden-alchemist",
-      "title": "禁忌鍊金術師改善",
+      "title": "禁忌鍊金士改善",
       "category": "minor",
       "groupId": null,
       "needsReview": false,
@@ -1114,7 +1421,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892977",
-            "title": "禁忌鍊金術師改善"
+            "title": "禁忌鍊金士改善",
+            "originalTitle": "禁忌鍊金士改善"
           }
         ]
       },
@@ -1132,11 +1440,17 @@
         ]
       },
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "禁忌鍊金士改善",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "original",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892970",
-      "title": "[수정] 8/21(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 8/21（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1146,7 +1460,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892970",
-            "title": "[수정] 8/21(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 8/21（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 8/21(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1159,11 +1474,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 8/21(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4892996",
-      "title": "[수정] 8/28(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 8/28（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1173,7 +1494,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892996",
-            "title": "[수정] 8/28(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 8/28（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 8/28(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1186,11 +1508,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 8/28(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893009",
-      "title": "[수정] 9/4(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 9/4（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1200,7 +1528,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893009",
-            "title": "[수정] 9/4(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 9/4（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 9/4(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1213,11 +1542,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 9/4(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893022",
-      "title": "[수정] 9/11(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 9/11（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1227,7 +1562,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893022",
-            "title": "[수정] 9/11(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 9/11（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 9/11(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1240,11 +1576,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 9/11(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893030",
-      "title": "[적용됨] 에코스톤 강화 경험 개편",
+      "title": "[已套用] 回音石強化體驗改版",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1254,7 +1596,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893030",
-            "title": "[적용됨] 에코스톤 강화 경험 개편"
+            "title": "[已套用] 回音石強化體驗改版",
+            "originalTitle": "[적용됨] 에코스톤 강화 경험 개편"
           }
         ]
       },
@@ -1267,11 +1610,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[적용됨] 에코스톤 강화 경험 개편",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893042",
-      "title": "9/18(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "9/18（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1281,7 +1630,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893042",
-            "title": "9/18(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "9/18（四） 正式伺服器更新內容公告",
+            "originalTitle": "9/18(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1294,11 +1644,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "9/18(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893068",
-      "title": "[수정] 9/25(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 9/25（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1308,7 +1664,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893068",
-            "title": "[수정] 9/25(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 9/25（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 9/25(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1321,11 +1678,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 9/25(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893078",
-      "title": "[수정] 9/30(화) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 9/30（二） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1335,7 +1698,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893078",
-            "title": "[수정] 9/30(화) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 9/30（二） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 9/30(화) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1348,11 +1712,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 9/30(화) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893089",
-      "title": "[수정] 10/16(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 10/16（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1362,7 +1732,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893089",
-            "title": "[수정] 10/16(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 10/16（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 10/16(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1375,7 +1746,13 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 10/16(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "samhain-2025",
@@ -1389,7 +1766,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893094",
-            "title": "2025 薩溫節更新"
+            "title": "2025 薩溫節更新",
+            "originalTitle": "2025 薩溫節更新"
           }
         ]
       },
@@ -1442,11 +1820,17 @@
         ]
       },
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "2025 薩溫節更新",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "original",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893098",
-      "title": "[수정] 10/23(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 10/23（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1456,7 +1840,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893098",
-            "title": "[수정] 10/23(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 10/23（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 10/23(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1469,11 +1854,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 10/23(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893110",
-      "title": "10/30(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "10/30（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1483,7 +1874,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893110",
-            "title": "10/30(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "10/30（四） 正式伺服器更新內容公告",
+            "originalTitle": "10/30(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1496,11 +1888,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "10/30(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893117",
-      "title": "11/6(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "11/6（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1510,7 +1908,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893117",
-            "title": "11/6(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "11/6（四） 正式伺服器更新內容公告",
+            "originalTitle": "11/6(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1523,11 +1922,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "11/6(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893130",
-      "title": "11/13(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "11/13（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1537,7 +1942,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893130",
-            "title": "11/13(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "11/13（四） 正式伺服器更新內容公告",
+            "originalTitle": "11/13(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1550,11 +1956,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "11/13(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893148",
-      "title": "[수정] 11/20(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 11/20（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1564,7 +1976,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893148",
-            "title": "[수정] 11/20(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 11/20（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 11/20(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1577,11 +1990,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 11/20(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893168",
-      "title": "11/27(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "11/27（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1591,7 +2010,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893168",
-            "title": "11/27(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "11/27（四） 正式伺服器更新內容公告",
+            "originalTitle": "11/27(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1604,11 +2024,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "11/27(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893191",
-      "title": "[수정] 12/4(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 12/4（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1618,7 +2044,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893191",
-            "title": "[수정] 12/4(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 12/4（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 12/4(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1631,11 +2058,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 12/4(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893212",
-      "title": "12/11(목) 정식 서버 패치 작업 변경점 안내 (1)",
+      "title": "12/11（四） 正式伺服器更新內容公告 (1)",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1645,7 +2078,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893212",
-            "title": "12/11(목) 정식 서버 패치 작업 변경점 안내 (1)"
+            "title": "12/11（四） 正式伺服器更新內容公告 (1)",
+            "originalTitle": "12/11(목) 정식 서버 패치 작업 변경점 안내 (1)"
           }
         ]
       },
@@ -1658,11 +2092,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "12/11(목) 정식 서버 패치 작업 변경점 안내 (1)",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "new-life-1",
-      "title": "NEW LIFE 生活系統改版",
+      "title": "NEW LIFE（新生活） 生活系統改版",
       "category": "major",
       "groupId": "new-life",
       "needsReview": false,
@@ -1672,7 +2112,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893223",
-            "title": "NEW LIFE 生活系統改版"
+            "title": "NEW LIFE（新生活） 生活系統改版",
+            "originalTitle": "NEW LIFE 生活系統改版"
           }
         ]
       },
@@ -1730,11 +2171,17 @@
         ]
       },
       "categoryLabel": "改版大項目",
-      "importance": "major"
+      "importance": "major",
+      "originalTitle": "NEW LIFE 生活系統改版",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893235",
-      "title": "(수정) 12/18(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(修正) 12/18（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1744,7 +2191,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893235",
-            "title": "(수정) 12/18(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(修正) 12/18（四） 正式伺服器更新內容公告",
+            "originalTitle": "(수정) 12/18(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1757,11 +2205,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(수정) 12/18(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893254",
-      "title": "12/23(화) 정식 서버 패치 작업 변경점 안내",
+      "title": "12/23（二） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1771,7 +2225,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893254",
-            "title": "12/23(화) 정식 서버 패치 작업 변경점 안내"
+            "title": "12/23（二） 正式伺服器更新內容公告",
+            "originalTitle": "12/23(화) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1784,11 +2239,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "12/23(화) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893261",
-      "title": "12/30(화) 정식 서버 패치 작업 변경점 안내",
+      "title": "12/30（二） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1798,7 +2259,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893261",
-            "title": "12/30(화) 정식 서버 패치 작업 변경점 안내"
+            "title": "12/30（二） 正式伺服器更新內容公告",
+            "originalTitle": "12/30(화) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1811,11 +2273,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "12/30(화) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893268",
-      "title": "1/8(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "1/8（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1825,7 +2293,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893268",
-            "title": "1/8(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "1/8（四） 正式伺服器更新內容公告",
+            "originalTitle": "1/8(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1838,7 +2307,13 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "1/8(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "g28-part1",
@@ -1852,7 +2327,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893279",
-            "title": "G28 暮色的殘虛 第一部"
+            "title": "G28 暮色的殘虛 第一部",
+            "originalTitle": "G28 暮色的殘虛 第一部"
           }
         ]
       },
@@ -1915,11 +2391,17 @@
         ]
       },
       "categoryLabel": "劇情大項目",
-      "importance": "major"
+      "importance": "major",
+      "originalTitle": "G28 暮色的殘虛 第一部",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "original",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893281",
-      "title": "(내용추가) 1/15(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(內容追加) 1/15（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1929,7 +2411,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893281",
-            "title": "(내용추가) 1/15(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(內容追加) 1/15（四） 正式伺服器更新內容公告",
+            "originalTitle": "(내용추가) 1/15(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1942,11 +2425,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(내용추가) 1/15(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893296",
-      "title": "(내용추가) 1/22(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(內容追加) 1/22（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1956,7 +2445,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893296",
-            "title": "(내용추가) 1/22(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(內容追加) 1/22（四） 正式伺服器更新內容公告",
+            "originalTitle": "(내용추가) 1/22(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1969,11 +2459,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(내용추가) 1/22(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893308",
-      "title": "1/29(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "1/29（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -1983,7 +2479,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893308",
-            "title": "1/29(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "1/29（四） 正式伺服器更新內容公告",
+            "originalTitle": "1/29(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -1996,11 +2493,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "1/29(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893318",
-      "title": "2/5(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "2/5（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2010,7 +2513,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893318",
-            "title": "2/5(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "2/5（四） 正式伺服器更新內容公告",
+            "originalTitle": "2/5(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2023,7 +2527,13 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "2/5(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "g28-part2",
@@ -2037,7 +2547,8 @@
         "sources": [
           {
             "url": "https://kr-newsroom.nexon.com/press-center/3376035",
-            "title": "G28 暮色的殘虛 第二部"
+            "title": "G28 暮色的殘虛 第二部",
+            "originalTitle": "G28 暮色的殘虛 第二部"
           }
         ]
       },
@@ -2100,11 +2611,17 @@
         ]
       },
       "categoryLabel": "劇情大項目",
-      "importance": "major"
+      "importance": "major",
+      "originalTitle": "G28 暮色的殘虛 第二部",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "original",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893329",
-      "title": "(수정) 2/12(목) 정식 서버 패치 작업 변경점 안내 (1)",
+      "title": "(修正) 2/12（四） 正式伺服器更新內容公告 (1)",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2114,7 +2631,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893329",
-            "title": "(수정) 2/12(목) 정식 서버 패치 작업 변경점 안내 (1)"
+            "title": "(修正) 2/12（四） 正式伺服器更新內容公告 (1)",
+            "originalTitle": "(수정) 2/12(목) 정식 서버 패치 작업 변경점 안내 (1)"
           }
         ]
       },
@@ -2127,11 +2645,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(수정) 2/12(목) 정식 서버 패치 작업 변경점 안내 (1)",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893335",
-      "title": "(내용추가) 2/12(목) 정식 서버 패치 작업 변경점 안내 (2)",
+      "title": "(內容追加) 2/12（四） 正式伺服器更新內容公告 (2)",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2141,7 +2665,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893335",
-            "title": "(내용추가) 2/12(목) 정식 서버 패치 작업 변경점 안내 (2)"
+            "title": "(內容追加) 2/12（四） 正式伺服器更新內容公告 (2)",
+            "originalTitle": "(내용추가) 2/12(목) 정식 서버 패치 작업 변경점 안내 (2)"
           }
         ]
       },
@@ -2154,11 +2679,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(내용추가) 2/12(목) 정식 서버 패치 작업 변경점 안내 (2)",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893391",
-      "title": "2/19(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "2/19（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2168,7 +2699,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893391",
-            "title": "2/19(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "2/19（四） 正式伺服器更新內容公告",
+            "originalTitle": "2/19(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2181,11 +2713,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "2/19(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893399",
-      "title": "(내용추가) 2/26(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(內容追加) 2/26（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2195,7 +2733,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893399",
-            "title": "(내용추가) 2/26(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(內容追加) 2/26（四） 正式伺服器更新內容公告",
+            "originalTitle": "(내용추가) 2/26(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2208,11 +2747,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(내용추가) 2/26(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893411",
-      "title": "3/5(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "3/5（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2222,7 +2767,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893411",
-            "title": "3/5(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "3/5（四） 正式伺服器更新內容公告",
+            "originalTitle": "3/5(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2235,11 +2781,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "3/5(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893422",
-      "title": "(수정2) 3/12(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(修正2) 3/12（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2249,7 +2801,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893422",
-            "title": "(수정2) 3/12(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(修正2) 3/12（四） 正式伺服器更新內容公告",
+            "originalTitle": "(수정2) 3/12(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2262,11 +2815,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(수정2) 3/12(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893436",
-      "title": "(수정) 3/19(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(修正) 3/19（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2276,7 +2835,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893436",
-            "title": "(수정) 3/19(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(修正) 3/19（四） 正式伺服器更新內容公告",
+            "originalTitle": "(수정) 3/19(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2289,11 +2849,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(수정) 3/19(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893444",
-      "title": "3/26(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "3/26（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2303,7 +2869,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893444",
-            "title": "3/26(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "3/26（四） 正式伺服器更新內容公告",
+            "originalTitle": "3/26(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2316,11 +2883,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "3/26(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893453",
-      "title": "4/2(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "4/2（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2330,7 +2903,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893453",
-            "title": "4/2(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "4/2（四） 正式伺服器更新內容公告",
+            "originalTitle": "4/2(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2343,11 +2917,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "4/2(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893457",
-      "title": "(수정) 4/9(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(修正) 4/9（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2357,7 +2937,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893457",
-            "title": "(수정) 4/9(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(修正) 4/9（四） 正式伺服器更新內容公告",
+            "originalTitle": "(수정) 4/9(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2370,11 +2951,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(수정) 4/9(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893464",
-      "title": "(수정) 4/16(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(修正) 4/16（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2384,7 +2971,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893464",
-            "title": "(수정) 4/16(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(修正) 4/16（四） 正式伺服器更新內容公告",
+            "originalTitle": "(수정) 4/16(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2397,11 +2985,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(수정) 4/16(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893477",
-      "title": "4/23(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "4/23（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2411,7 +3005,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893477",
-            "title": "4/23(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "4/23（四） 正式伺服器更新內容公告",
+            "originalTitle": "4/23(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2424,11 +3019,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "4/23(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893489",
-      "title": "4/30(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "4/30（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2438,7 +3039,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893489",
-            "title": "4/30(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "4/30（四） 正式伺服器更新內容公告",
+            "originalTitle": "4/30(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2451,11 +3053,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "4/30(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893500",
-      "title": "(수정) 5/7(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(修正) 5/7（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2465,7 +3073,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893500",
-            "title": "(수정) 5/7(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(修正) 5/7（四） 正式伺服器更新內容公告",
+            "originalTitle": "(수정) 5/7(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2478,11 +3087,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(수정) 5/7(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893513",
-      "title": "5/14(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "5/14（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2492,7 +3107,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893513",
-            "title": "5/14(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "5/14（四） 正式伺服器更新內容公告",
+            "originalTitle": "5/14(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2505,11 +3121,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "5/14(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893531",
-      "title": "5/21(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "5/21（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2519,7 +3141,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893531",
-            "title": "5/21(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "5/21（四） 正式伺服器更新內容公告",
+            "originalTitle": "5/21(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2532,11 +3155,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "5/21(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893543",
-      "title": "(내용추가) 5/28(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(內容追加) 5/28（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2546,7 +3175,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893543",
-            "title": "(내용추가) 5/28(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(內容追加) 5/28（四） 正式伺服器更新內容公告",
+            "originalTitle": "(내용추가) 5/28(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2559,11 +3189,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(내용추가) 5/28(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893556",
-      "title": "6/4(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "6/4（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2573,7 +3209,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893556",
-            "title": "6/4(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "6/4（四） 正式伺服器更新內容公告",
+            "originalTitle": "6/4(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2586,11 +3223,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "6/4(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893566",
-      "title": "6/11(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "6/11（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2600,7 +3243,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893566",
-            "title": "6/11(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "6/11（四） 正式伺服器更新內容公告",
+            "originalTitle": "6/11(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2613,11 +3257,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "6/11(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893577",
-      "title": "6/18(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "6/18（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2627,7 +3277,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893577",
-            "title": "6/18(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "6/18（四） 正式伺服器更新內容公告",
+            "originalTitle": "6/18(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2640,11 +3291,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "6/18(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893590",
-      "title": "[수정] 6/25(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "[修正] 6/25（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2654,7 +3311,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893590",
-            "title": "[수정] 6/25(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "[修正] 6/25（四） 正式伺服器更新內容公告",
+            "originalTitle": "[수정] 6/25(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2667,11 +3325,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "[수정] 6/25(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893617",
-      "title": "7/2(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "7/2（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2681,7 +3345,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893617",
-            "title": "7/2(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "7/2（四） 正式伺服器更新內容公告",
+            "originalTitle": "7/2(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2694,11 +3359,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "7/2(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "reaction-1",
-      "title": "RE:ACTION 第一階段",
+      "title": "RE:ACTION（再次行動，暫譯） 第一階段",
       "category": "major",
       "groupId": "reaction",
       "needsReview": false,
@@ -2708,11 +3379,13 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893633",
-            "title": "RE:ACTION 第一階段"
+            "title": "RE:ACTION（再次行動，暫譯） 第一階段",
+            "originalTitle": "RE:ACTION 第一階段"
           },
           {
             "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893639",
-            "title": "正式伺服器已套用開發者筆記"
+            "title": "正式伺服器已套用開發者筆記",
+            "originalTitle": "正式伺服器已套用開發者筆記"
           }
         ]
       },
@@ -2724,11 +3397,17 @@
         "candidateSources": []
       },
       "categoryLabel": "改版大項目",
-      "importance": "major"
+      "importance": "major",
+      "originalTitle": "RE:ACTION 第一階段",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": true
+      }
     },
     {
       "id": "kr-4893661",
-      "title": "7/16(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "7/16（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2738,7 +3417,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893661",
-            "title": "7/16(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "7/16（四） 正式伺服器更新內容公告",
+            "originalTitle": "7/16(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2751,11 +3431,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "7/16(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893667",
-      "title": "7/23(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "7/23（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2765,7 +3451,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893667",
-            "title": "7/23(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "7/23（四） 正式伺服器更新內容公告",
+            "originalTitle": "7/23(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2778,11 +3465,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "7/23(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893695",
-      "title": "7/30(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "7/30（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2792,7 +3485,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893695",
-            "title": "7/30(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "7/30（四） 正式伺服器更新內容公告",
+            "originalTitle": "7/30(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2805,11 +3499,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "7/30(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893706",
-      "title": "8/6(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "8/6（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2819,7 +3519,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893706",
-            "title": "8/6(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "8/6（四） 正式伺服器更新內容公告",
+            "originalTitle": "8/6(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2832,11 +3533,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "8/6(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "reaction-2",
-      "title": "RE:ACTION 第二階段",
+      "title": "RE:ACTION（再次行動，暫譯） 第二階段",
       "category": "major",
       "groupId": "reaction",
       "needsReview": false,
@@ -2846,11 +3553,13 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893714",
-            "title": "RE:ACTION 第二階段"
+            "title": "RE:ACTION（再次行動，暫譯） 第二階段",
+            "originalTitle": "RE:ACTION 第二階段"
           },
           {
             "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893721",
-            "title": "正式伺服器已套用開發者筆記"
+            "title": "正式伺服器已套用開發者筆記",
+            "originalTitle": "正式伺服器已套用開發者筆記"
           }
         ]
       },
@@ -2862,11 +3571,17 @@
         "candidateSources": []
       },
       "categoryLabel": "改版大項目",
-      "importance": "major"
+      "importance": "major",
+      "originalTitle": "RE:ACTION 第二階段",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": true
+      }
     },
     {
       "id": "kr-4893726",
-      "title": "8/20(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "8/20（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2876,7 +3591,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893726",
-            "title": "8/20(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "8/20（四） 正式伺服器更新內容公告",
+            "originalTitle": "8/20(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2889,11 +3605,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "8/20(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893746",
-      "title": "8/27(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "8/27（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2903,7 +3625,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893746",
-            "title": "8/27(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "8/27（四） 正式伺服器更新內容公告",
+            "originalTitle": "8/27(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2916,11 +3639,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "8/27(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893805",
-      "title": "(수정) 9/3(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(修正) 9/3（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2930,7 +3659,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893805",
-            "title": "(수정) 9/3(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(修正) 9/3（四） 正式伺服器更新內容公告",
+            "originalTitle": "(수정) 9/3(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2943,11 +3673,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(수정) 9/3(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893828",
-      "title": "(수정) 9월 정식 서버 업데이트 작업 변경점 안내",
+      "title": "(修正) 9月 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2957,7 +3693,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893828",
-            "title": "(수정) 9월 정식 서버 업데이트 작업 변경점 안내"
+            "title": "(修正) 9月 正式伺服器更新內容公告",
+            "originalTitle": "(수정) 9월 정식 서버 업데이트 작업 변경점 안내"
           }
         ]
       },
@@ -2970,11 +3707,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(수정) 9월 정식 서버 업데이트 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893841",
-      "title": "9/17(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "9/17（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -2984,7 +3727,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893841",
-            "title": "9/17(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "9/17（四） 正式伺服器更新內容公告",
+            "originalTitle": "9/17(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -2997,11 +3741,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "9/17(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893851",
-      "title": "9/22(화) 정식 서버 패치 작업 변경점 안내",
+      "title": "9/22（二） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -3011,7 +3761,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893851",
-            "title": "9/22(화) 정식 서버 패치 작업 변경점 안내"
+            "title": "9/22（二） 正式伺服器更新內容公告",
+            "originalTitle": "9/22(화) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -3024,11 +3775,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "9/22(화) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893860",
-      "title": "10/1(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "10/1（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -3038,7 +3795,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893860",
-            "title": "10/1(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "10/1（四） 正式伺服器更新內容公告",
+            "originalTitle": "10/1(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -3051,11 +3809,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "10/1(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893872",
-      "title": "10/8(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "10/8（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -3065,7 +3829,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893872",
-            "title": "10/8(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "10/8（四） 正式伺服器更新內容公告",
+            "originalTitle": "10/8(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -3078,11 +3843,17 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "10/8(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893882",
-      "title": "10월 정식 서버 업데이트 작업 변경점 안내",
+      "title": "10月 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -3092,7 +3863,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893882",
-            "title": "10월 정식 서버 업데이트 작업 변경점 안내"
+            "title": "10月 正式伺服器更新內容公告",
+            "originalTitle": "10월 정식 서버 업데이트 작업 변경점 안내"
           }
         ]
       },
@@ -3105,7 +3877,13 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "10월 정식 서버 업데이트 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "witch-hat-2026",
@@ -3119,7 +3897,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893883",
-            "title": "瑪奇 × 魔法帽的工作室"
+            "title": "瑪奇 × 魔法帽的工作室",
+            "originalTitle": "瑪奇 × 魔法帽的工作室"
           }
         ]
       },
@@ -3131,11 +3910,17 @@
         "candidateSources": []
       },
       "categoryLabel": "合作",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "瑪奇 × 魔法帽的工作室",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "original",
+        "provisionalTerms": false
+      }
     },
     {
       "id": "kr-4893891",
-      "title": "(수정2) 10/22(목) 정식 서버 패치 작업 변경점 안내",
+      "title": "(修正2) 10/22（四） 正式伺服器更新內容公告",
       "category": "minor",
       "groupId": null,
       "needsReview": true,
@@ -3145,7 +3930,8 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893891",
-            "title": "(수정2) 10/22(목) 정식 서버 패치 작업 변경점 안내"
+            "title": "(修正2) 10/22（四） 正式伺服器更新內容公告",
+            "originalTitle": "(수정2) 10/22(목) 정식 서버 패치 작업 변경점 안내"
           }
         ]
       },
@@ -3158,7 +3944,13 @@
       },
       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。",
       "categoryLabel": "小項目",
-      "importance": "normal"
+      "importance": "normal",
+      "originalTitle": "(수정2) 10/22(목) 정식 서버 패치 작업 변경점 안내",
+      "titleLocale": "zh-TW",
+      "titleTranslation": {
+        "method": "glossary",
+        "provisionalTerms": false
+      }
     }
   ],
   "reviewQueue": [
@@ -3166,109 +3958,126 @@
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892679",
-      "title": "마비노기 X 마비노기 모바일 콜라보 이벤트 안내",
+      "title": "瑪奇 X 마비노기 모바일（瑪奇 Mobile，暫譯） 合作活動公告",
       "publishedDate": "2025-03-27",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "마비노기 X 마비노기 모바일 콜라보 이벤트 안내"
     },
     {
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893185",
-      "title": "12/1(월) 마비노기 이터니티 '숏 뉴스' 업데이트 안내",
+      "title": "12/1（一） 마비노기 이터니티（瑪奇永恆計畫，暫譯） '短訊' 更新公告",
       "publishedDate": "2025-12-01",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "12/1(월) 마비노기 이터니티 '숏 뉴스' 업데이트 안내"
     },
     {
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893222",
-      "title": "12/11(목) 마비노기 이터니티 새로운 소식 업데이트 안내",
+      "title": "12/11（四） 마비노기 이터니티（瑪奇永恆計畫，暫譯） 最新消息公告",
       "publishedDate": "2025-12-11",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "12/11(목) 마비노기 이터니티 새로운 소식 업데이트 안내"
     },
     {
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893276",
-      "title": "1/15(목) 마비노기 이터니티 새로운 소식 업데이트 안내",
+      "title": "1/15（四） 마비노기 이터니티（瑪奇永恆計畫，暫譯） 最新消息公告",
       "publishedDate": "2026-01-15",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "1/15(목) 마비노기 이터니티 새로운 소식 업데이트 안내"
     },
     {
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893460",
-      "title": "마비노기X바람의나라 콜라보 이벤트 안내",
+      "title": "瑪奇X바람의나라（風之國，暫譯） 合作活動公告",
       "publishedDate": "2026-04-09",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "마비노기X바람의나라 콜라보 이벤트 안내"
     },
     {
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893613",
-      "title": "7/2(목) 마비노기 이터니티 새로운 소식 업데이트 안내",
+      "title": "7/2（四） 마비노기 이터니티（瑪奇永恆計畫，暫譯） 最新消息公告",
       "publishedDate": "2026-07-02",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "7/2(목) 마비노기 이터니티 새로운 소식 업데이트 안내"
     },
     {
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893632",
-      "title": "RE:ACTION 1차 업데이트 안내",
+      "title": "RE:ACTION（再次行動，暫譯） 第一階段 更新公告",
       "publishedDate": "2026-07-09",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "RE:ACTION 1차 업데이트 안내"
     },
     {
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893665",
-      "title": "7/23(목) 마비노기 이터니티 새로운 소식 업데이트 안내",
+      "title": "7/23（四） 마비노기 이터니티（瑪奇永恆計畫，暫譯） 最新消息公告",
       "publishedDate": "2026-07-23",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "7/23(목) 마비노기 이터니티 새로운 소식 업데이트 안내"
     },
     {
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893723",
-      "title": "RE:ACTION 2차 업데이트 안내",
+      "title": "RE:ACTION（再次行動，暫譯） 第二階段 更新公告",
       "publishedDate": "2026-08-13",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "RE:ACTION 2차 업데이트 안내"
     },
     {
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893822",
-      "title": "9/7(월) 마비노기 이터니티 새로운 소식 업데이트 안내",
+      "title": "9/7（一） 마비노기 이터니티（瑪奇永恆計畫，暫譯） 最新消息公告",
       "publishedDate": "2026-09-07",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "9/7(월) 마비노기 이터니티 새로운 소식 업데이트 안내"
     },
     {
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893830",
-      "title": "신규 던전 '탈라 가흐' 업데이트 안내",
+      "title": "全新 地下城 '탈라 가흐（塔拉加赫，暫譯）' 更新公告",
       "publishedDate": "2026-09-10",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "신규 던전 '탈라 가흐' 업데이트 안내"
     },
     {
       "region": "kr",
       "reason": "正式實裝日期待確認",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893864",
-      "title": "10/8(목) 마비노기 이터니티 새로운 소식 업데이트 안내",
+      "title": "10/8（四） 마비노기 이터니티（瑪奇永恆計畫，暫譯） 最新消息公告",
       "publishedDate": "2026-10-08",
       "releaseDate": null,
-      "checkedDate": "2026-10-26"
+      "checkedDate": "2026-10-26",
+      "originalTitle": "10/8(목) 마비노기 이터니티 새로운 소식 업데이트 안내"
     }
-  ]
+  ],
+  "localization": {
+    "locale": "zh-TW",
+    "revision": 1,
+    "policy": "台版官方名稱優先；未定名專有名詞保留原文並附繁中暫譯；原文獨立保存。"
+  }
 }

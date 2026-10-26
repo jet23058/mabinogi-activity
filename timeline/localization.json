@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "locale": "zh-TW",
+  "terms": [
+    {"original": "세이크리드 가드", "display": "聖盾守衛", "official": true, "source": "https://mabinogi.beanfun.com/News?catId=inside&bid=74608"},
+    {"original": "포비든 알케미스트", "display": "禁忌鍊金士", "official": true, "source": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=17757"},
+    {"original": "브리 레흐", "display": "布里萊赫", "official": true, "source": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=17640"},
+    {"original": "에코스톤", "display": "回音石", "official": true, "source": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=17718"},
+    {"original": "삼하인", "display": "薩溫節", "official": true, "source": "https://tw-event.beanfun.com/mabinogi/EventAD/EventAD.aspx?EventADID=14602"},
+    {"original": "NEW RISE", "display": "NEW RISE（嶄新冒險）", "official": true, "source": "https://tw-event.beanfun.com/Mabinogi/EventAD/EventAD.aspx?EventADID=16123"},
+    {"original": "NEW LIFE", "display": "NEW LIFE（新生活）", "official": true, "source": "https://tw-event.beanfun.com/Mabinogi/EventAD/EventAD.aspx?EventADID=18840"},
+    {"original": "RE:ACTION", "display": "RE:ACTION（再次行動，暫譯）", "official": false},
+    {"original": "마비노기 이터니티", "display": "마비노기 이터니티（瑪奇永恆計畫，暫譯）", "official": false},
+    {"original": "마비노기 모바일", "display": "마비노기 모바일（瑪奇 Mobile，暫譯）", "official": false},
+    {"original": "탈라 가흐", "display": "탈라 가흐（塔拉加赫，暫譯）", "official": false},
+    {"original": "바람의나라", "display": "바람의나라（風之國，暫譯）", "official": false},
+    {"original": "고깔모자의 아틀리에", "display": "고깔모자의 아틀리에（魔法帽的工作室）", "official": false},
+    {"original": "마비노기", "display": "瑪奇", "official": true, "source": "https://mabinogi.beanfun.com/"}
+  ],
+  "titleOverrides": {
+    "神聖盾衛技能改善": "聖盾守衛技能改善",
+    "禁忌鍊金術師改善": "禁忌鍊金士改善",
+    "[적용됨] 에코스톤 강화 경험 개편": "[已套用] 回音石強化體驗改版"
+  },
+  "groupTitles": {
+    "g28": "G28 暮色的殘虛",
+    "reaction": "RE:ACTION（再次行動，暫譯）",
+    "new-rise": "NEW RISE（嶄新冒險）",
+    "new-life": "NEW LIFE（新生活）"
+  }
+}

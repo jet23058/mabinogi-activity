@@ -2,6 +2,9 @@ import copy
 import importlib.util
 from pathlib import Path
 import unittest
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 SPEC = importlib.util.spec_from_file_location("timeline", Path(__file__).resolve().parents[1] / "scripts/update_timeline.py")
 m = importlib.util.module_from_spec(SPEC)

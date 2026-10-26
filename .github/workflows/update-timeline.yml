@@ -8,15 +8,19 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/update-timeline.yml'
-      - 'scripts/update_timeline.py'
+      - 'scripts/**'
       - 'tests/**'
       - 'timeline/curated.json'
+      - 'timeline/localization.json'
+      - 'timeline/translations.json'
   pull_request:
     paths:
       - '.github/workflows/update-timeline.yml'
-      - 'scripts/update_timeline.py'
+      - 'scripts/**'
       - 'tests/**'
       - 'timeline/curated.json'
+      - 'timeline/localization.json'
+      - 'timeline/translations.json'
 
 permissions:
   contents: read
@@ -69,7 +73,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add update-timeline.json timeline/source-index.json
+          git add update-timeline.json timeline/source-index.json timeline/translations.json
           if git diff --cached --quiet; then
             echo 'Timeline is unchanged.'
           else

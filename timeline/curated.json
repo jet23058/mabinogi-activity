@@ -29,10 +29,10 @@
       "RE:ACTION"
     ],
     "sacred-guard": [
-      "神聖盾衛"
+      "聖盾守衛"
     ],
     "forbidden-alchemist": [
-      "禁忌鍊金"
+      "禁忌鍊金士"
     ],
     "witch-hat-2026": [
       "魔法帽",
@@ -70,7 +70,7 @@
     },
     {
       "id": "sacred-guard",
-      "title": "神聖盾衛技能改善",
+      "title": "聖盾守衛技能改善",
       "category": "minor",
       "groupId": null,
       "needsReview": false,
@@ -80,7 +80,7 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892694",
-            "title": "神聖盾衛技能改善"
+            "title": "聖盾守衛技能改善"
           }
         ]
       },
@@ -114,7 +114,7 @@
     },
     {
       "id": "forbidden-alchemist",
-      "title": "禁忌鍊金術師改善",
+      "title": "禁忌鍊金士改善",
       "category": "minor",
       "groupId": null,
       "needsReview": false,
@@ -124,7 +124,7 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892977",
-            "title": "禁忌鍊金術師改善"
+            "title": "禁忌鍊金士改善"
           }
         ]
       },

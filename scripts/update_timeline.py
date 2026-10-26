@@ -13,6 +13,7 @@ import time
 from datetime import date, datetime, timezone
 from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
+from timeline_localization import Localizer
 
 ROOT = Path(__file__).resolve().parents[1]
 CATEGORIES = {"story": "劇情大項目", "major": "改版大項目", "minor": "小項目", "collaboration": "合作"}
@@ -350,6 +351,10 @@ def main():
         archive = {"kr": crawl_kr(client, archive["kr"], args.today), "tw": crawl_tw(client, archive["tw"], args.today)}
     result = build(catalog, archive["kr"], archive["tw"], args.today)
     assert result["events"], "Refusing to publish an empty timeline"
+    localizer = Localizer(read(ROOT / "timeline/localization.json", {}),
+                          read(ROOT / "timeline/translations.json", {}), offline=args.offline)
+    result = localizer.apply(result)
+    write(ROOT / "timeline/translations.json", localizer.cache)
     write(ROOT / "timeline/source-index.json", archive)
     write(ROOT / "update-timeline.json", result)
     print(f"Built {len(result['events'])} events / {len(result['groups'])} groups, {len(result['reviewQueue'])} dates pending review")
