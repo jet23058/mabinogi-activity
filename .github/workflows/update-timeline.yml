@@ -35,6 +35,7 @@ jobs:
     timeout-minutes: 40
     permissions:
       contents: write
+      copilot-requests: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -44,11 +45,13 @@ jobs:
           python-version: '3.13'
       - name: Test parsing, classification and evidence validation
         run: python -m unittest discover -s tests -v
-      - name: Verify research model configuration
+      - uses: actions/setup-node@v4
         if: github.event_name != 'pull_request'
-        env:
-          TIMELINE_AI_API_KEY: ${{ secrets.TIMELINE_AI_API_KEY || secrets.GEMINI_API_KEY }}
-        run: python -c "from scripts.research_timeline import AI; AI('.cache/timeline')"
+        with:
+          node-version: '24'
+      - name: Install Copilot CLI
+        if: github.event_name != 'pull_request'
+        run: npm install -g @github/copilot@1.0.103
       - name: Restore official-page cache
         if: github.event_name != 'pull_request'
         uses: actions/cache/restore@v4
@@ -59,9 +62,10 @@ jobs:
       - name: Read official bodies, extract features and research TW releases
         if: github.event_name != 'pull_request'
         env:
-          TIMELINE_AI_API_KEY: ${{ secrets.TIMELINE_AI_API_KEY || secrets.GEMINI_API_KEY }}
-          TIMELINE_AI_BASE_URL: ${{ vars.TIMELINE_AI_BASE_URL }}
-          TIMELINE_AI_MODEL: ${{ vars.TIMELINE_AI_MODEL }}
+          GITHUB_TOKEN: ${{ github.token }}
+          TIMELINE_AI_PROVIDER: copilot
+          TIMELINE_AI_MAX_CALLS: '4'
+          TIMELINE_RESEARCH_DOCUMENTS: '1'
         run: python scripts/update_timeline.py --research
       - name: Validate catalog offline for pull requests
         if: github.event_name == 'pull_request'

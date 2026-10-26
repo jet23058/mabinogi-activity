@@ -81,3 +81,17 @@ Action 使用 `--research`：
 研究測試使用模型替身，驗證提取、台版匹配、逐字證據、日期與快取；它不代表已完成真實供應商的端到端驗證。
 
 英文改版與品牌名稱（例如 NEW RISE、NEW LIFE、RE:ACTION）保留英文，不額外加上中文直譯；括弧暫譯僅用於需要說明的韓文或日文專有名詞。
+
+
+## Copilot Free／Copilot CLI（目前預設）
+
+Action 已改用 Copilot CLI 1.0.103，透過內建 `GITHUB_TOKEN` 與 `copilot-requests: write` 呼叫個人帳號的 Copilot。不必設定 Gemini 金鑰，也不必另外申請 PAT。
+
+- 開通儲存庫擁有者的 Copilot Free 後，可在 Actions → Update KR-TW timeline → Run workflow 手動執行；每天10:35也會排程。
+- 為節省免費額度，每次只研究1篇公告、最多4次未命中快取的模型呼叫，優先處理近期與內容有變更的公告，之後逐批回補。
+- 已提取功能與台版對應結果會保存，額度上限到達時保留已完成進度與未確認項目，下一次接續。
+- 一次CLI呼叫仍可能消耗多個模型回合及token，呼叫數上限不等於費用或免費額度保證。額度不足或帳號驗證失敗時不覆蓋有效JSON。
+- CLI只接受stdin內的公開資料並輸出JSON；停用內建MCP及工具，不授權讀寫專案檔案或執行shell。
+- Gemini／OpenAI相容API後端仍可透過 `TIMELINE_AI_PROVIDER` 改為其他值並提供原先的API設定，在本機研究時使用。Action目前固定選用Copilot。
+
+上方 Gemini 金鑰設定只適用於替代API後端，目前預設Action不需要那些Secrets。

@@ -358,6 +358,11 @@ def main():
         archive = {"kr": crawl_kr(client, archive["kr"], args.today), "tw": crawl_tw(client, archive["tw"], args.today)}
     findings = []
     if ai:
+        known_ids = {event["id"] for event in catalog["events"]}
+        for event in read(ROOT / "update-timeline.json", {}).get("events", []):
+            if event["id"] not in known_ids and event.get("research", {}).get("method") == "body-evidence":
+                event["title"] = event.get("originalTitle", event["title"])
+                catalog["events"].append(event)
         from research_timeline import research
         catalog, findings, state = research(catalog, archive, client, ai, read(ROOT / "timeline/research-state.json", {}), args.today)
         write(ROOT / "timeline/research-state.json", state)

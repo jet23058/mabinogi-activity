@@ -4,6 +4,9 @@ import hashlib
 import json
 import os
 import re
+import shutil
+import subprocess
+import tempfile
 import time
 from datetime import date
 from pathlib import Path
@@ -32,25 +35,51 @@ def evidence(document, quote, day):
     return bool(re.search(fr"{y}\s*(?:年|년|[./-])\s*0?{m}\s*(?:月|월|[./-])\s*0?{d}(?!\d)", quote))
 
 
+class ResearchBudgetReached(Exception):
+    pass
+
+
 class AI:
     def __init__(self, directory):
+        self.provider = os.environ.get("TIMELINE_AI_PROVIDER", "copilot")
+        self.calls = 0
+        self.max_calls = max(1, min(20, int(os.environ.get("TIMELINE_AI_MAX_CALLS", "4"))))
+        if self.provider == "copilot" and (not shutil.which("copilot") or not (os.environ.get("GITHUB_TOKEN") or os.environ.get("COPILOT_GITHUB_TOKEN"))):
+            raise RuntimeError("Copilot CLI and GitHub Actions GITHUB_TOKEN are required")
         self.key = os.environ.get("TIMELINE_AI_API_KEY") or os.environ.get("GEMINI_API_KEY")
-        if not self.key:
+        if self.provider != "copilot" and not self.key:
             raise RuntimeError("Set repository secret TIMELINE_AI_API_KEY (or GEMINI_API_KEY) to enable body-level AI research. Existing JSON is preserved.")
         self.endpoint = os.environ.get("TIMELINE_AI_BASE_URL") or "https://generativelanguage.googleapis.com/v1beta/openai"
         if not self.endpoint.startswith("https://"):
             raise ValueError("AI endpoint must use HTTPS")
-        self.model = os.environ.get("TIMELINE_AI_MODEL") or "gemini-3.8-flash"
+        self.model = (os.environ.get("TIMELINE_AI_MODEL") or "gemini-3.8-flash") if self.provider != "copilot" else "auto"
         self.directory = Path(directory) / "research"
         self.directory.mkdir(parents=True, exist_ok=True)
 
     def ask(self, payload):
         body = {"model": self.model, "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}], "response_format": {"type": "json_object"}}
         raw = json.dumps(body, ensure_ascii=False).encode()
-        key = hashlib.sha256(str(VERSION).encode() + raw).hexdigest()
+        key = hashlib.sha256((str(VERSION) + self.provider).encode() + raw).hexdigest()
         path = self.directory / (key + ".json")
         if path.exists():
             return json.loads(path.read_text(encoding="utf-8"))
+        if self.calls >= self.max_calls:
+            raise ResearchBudgetReached("Per-run AI call budget reached; continue next run")
+        self.calls += 1
+        if self.provider == "copilot":
+            # A text-only invocation: no repository instructions, files, shell or MCP access.
+            with tempfile.TemporaryDirectory(prefix="mabi-research-") as directory:
+                prompt = SYSTEM + "\nRespond with ONLY the requested JSON, without tools or markdown.\n" + json.dumps(payload, ensure_ascii=False)
+                completed = subprocess.run(["copilot", "-s", "--disable-builtin-mcps", "--available-tools", "", "--deny-tool", "shell,write,read,url"], input=prompt, text=True, encoding="utf-8", capture_output=True, timeout=180, cwd=directory)
+            if completed.returncode:
+                raise RuntimeError("Copilot CLI failed: " + completed.stderr[-1200:])
+            output = completed.stdout.strip()
+            output = re.sub(r"^```(?:json)?\s*|\s*```$", "", output).strip()
+            value = json.loads(output)
+            if not isinstance(value, dict):
+                raise ValueError("Copilot must return a JSON object")
+            path.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
+            return value
         for attempt in range(3):
             try:
                 request = Request(self.endpoint.rstrip("/") + "/chat/completions", data=raw,
@@ -91,19 +120,30 @@ def research(catalog, archive, client, ai, state, today):
             text = Document(client.get(url)).root.text()
             tw_docs.append({"url": url, "title": row["title"], "text": text, "parentUrl": row["url"]})
     tw_fingerprint = hashlib.sha256(json.dumps(tw_docs, sort_keys=True).encode()).hexdigest()
-    for row in archive["kr"]:
+    processed = 0
+    max_documents = max(1, min(20, int(os.environ.get("TIMELINE_RESEARCH_DOCUMENTS", "1"))))
+    for row in sorted(archive["kr"], key=lambda row: row.get("publishedDate", ""), reverse=True):
         body = row.get("text", "")
         if not body:
             body = Document(client.get(row["url"])).root.text()
             row["text"] = body
         digest = hashlib.sha256((body + str(VERSION)).encode()).hexdigest()
         previous = state.get(row["url"], {})
+        if previous.get("digest") == digest and previous.get("twFingerprint") == tw_fingerprint:
+            continue
+        if processed >= max_documents:
+            break
+        processed += 1
         if previous.get("digest") == digest:
             features = previous["features"]
         else:
-            features = ai.ask({"task": "從此韓版正式公告內文抽出具體功能，與已知功能去重；有把握才提供existingId。返回 {features:[{title,category,groupId,existingId,releaseDate,quote,twSearchTerms}]}。category為story/major/minor/collaboration。", "document": {"url": row["url"], "text": body}, "knownFeatures": [{"id": e["id"], "title": e["title"]} for e in by_id.values()] }).get("features", [])
+            try:
+                features = ai.ask({"task": "從此韓版正式公告內文抽出具體功能，與已知功能去重；有把握才提供existingId。返回 {features:[{title,category,groupId,existingId,releaseDate,quote,twSearchTerms}]}。category為story/major/minor/collaboration。", "document": {"url": row["url"], "text": body}, "knownFeatures": [{"id": e["id"], "title": e["title"]} for e in by_id.values()] }).get("features", [])
+            except ResearchBudgetReached:
+                break
         if not isinstance(features, list):
             raise ValueError("Invalid feature extraction response")
+        state[row["url"]] = {"digest": digest, "features": features}
         for feature in features:
             day = feature.get("releaseDate")
             if feature.get("category") not in ("story", "major", "minor", "collaboration") or not isinstance(feature.get("title"), str) or not evidence({"text": body}, feature.get("quote"), day) or not "2025-01-01" <= day <= today:
@@ -125,7 +165,11 @@ def research(catalog, archive, client, ai, state, today):
             match = state.get(cache_key)
             if match is None:
                 docs = shortlist(feature, tw_docs)
-                match = ai.ask({"task": "逐項對照台版內文，找出同一功能的正式實裝日期。整章公告不可推定個別部份；必須逐字引用同時包含功能與完整實裝日期的句段。找不到返回 {status:'pending'}；找到返回 {status:'released',date,url,quote,matchStatus:'exact'或'partial'}。不得僅憑關鍵字相同確認實裝。", "feature": feature, "documents": [{"url": d["url"], "text": d.get("text", "")} for d in docs]})
+                try:
+                    match = ai.ask({"task": "逐項對照台版內文，找出同一功能的正式實裝日期。整章公告不可推定個別部份；必須逐字引用同時包含功能與完整實裝日期的句段。找不到返回 {status:'pending'}；找到返回 {status:'released',date,url,quote,matchStatus:'exact'或'partial'}。不得僅憑關鍵字相同確認實裝。", "feature": feature, "documents": [{"url": d["url"], "text": d.get("text", "")} for d in docs]})
+                except ResearchBudgetReached:
+                    result["events"] = list(by_id.values())
+                    return result, pending, state
                 state[cache_key] = match
             doc = next((doc for doc in tw_docs if doc["url"] == match.get("url")), None)
             if match.get("status") == "released" and doc and evidence(doc, match.get("quote"), match.get("date")) and match["date"] <= today and match.get("matchStatus") in ("exact", "partial"):
@@ -134,6 +178,6 @@ def research(catalog, archive, client, ai, state, today):
                     pending.append({"url": doc["url"], "title": event["title"], "reason": "AI找到候選日期，保留人工註記等待複核", "candidate": match})
                 else:
                     event["tw"] = {"date": match["date"], "status": "released", "matchStatus": match["matchStatus"], "sources": [{"url": doc["url"], "title": event["title"] + "｜台版官方實裝證據", "quote": match["quote"]}]}
-        state[row["url"]] = {"digest": digest, "features": features}
+        state[row["url"]] = {"digest": digest, "features": features, "twFingerprint": tw_fingerprint}
     result["events"] = list(by_id.values())
     return result, pending, state
