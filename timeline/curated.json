@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "groupTitles": {
+    "g28": "G28 暮色的殘虛",
+    "reaction": "RE:ACTION",
+    "new-rise": "NEW RISE",
+    "new-life": "NEW LIFE"
+  },
+  "twSearchTerms": {
+    "g28-part1": [
+      "G28",
+      "暮色的殘虛"
+    ],
+    "g28-part2": [
+      "G28",
+      "暮色的殘虛"
+    ],
+    "new-rise-1": [
+      "NEW RISE"
+    ],
+    "new-life-1": [
+      "NEW LIFE",
+      "生活系統"
+    ],
+    "reaction-1": [
+      "RE:ACTION"
+    ],
+    "reaction-2": [
+      "RE:ACTION"
+    ],
+    "sacred-guard": [
+      "神聖盾衛"
+    ],
+    "forbidden-alchemist": [
+      "禁忌鍊金"
+    ],
+    "witch-hat-2026": [
+      "魔法帽",
+      "工作室"
+    ],
+    "dungeon-entry": [
+      "地下城入場"
+    ],
+    "samhain-2025": [
+      "薩溫"
+    ]
+  },
+  "events": [
+    {
+      "id": "dungeon-entry",
+      "title": "地下城入場方式調整",
+      "category": "minor",
+      "groupId": null,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-03-13",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892645",
+            "title": "地下城入場方式調整"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      }
+    },
+    {
+      "id": "sacred-guard",
+      "title": "神聖盾衛技能改善",
+      "category": "minor",
+      "groupId": null,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-04-03",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892694",
+            "title": "神聖盾衛技能改善"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      }
+    },
+    {
+      "id": "new-rise-1",
+      "title": "NEW RISE 第一階段",
+      "category": "major",
+      "groupId": "new-rise",
+      "needsReview": false,
+      "kr": {
+        "date": "2025-07-10",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892882",
+            "title": "NEW RISE 第一階段"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      }
+    },
+    {
+      "id": "forbidden-alchemist",
+      "title": "禁忌鍊金術師改善",
+      "category": "minor",
+      "groupId": null,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-08-21",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892977",
+            "title": "禁忌鍊金術師改善"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      }
+    },
+    {
+      "id": "samhain-2025",
+      "title": "2025 薩溫節更新",
+      "category": "minor",
+      "groupId": null,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-10-16",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893094",
+            "title": "2025 薩溫節更新"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      }
+    },
+    {
+      "id": "new-life-1",
+      "title": "NEW LIFE 生活系統改版",
+      "category": "major",
+      "groupId": "new-life",
+      "needsReview": false,
+      "kr": {
+        "date": "2025-12-11",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893223",
+            "title": "NEW LIFE 生活系統改版"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      }
+    },
+    {
+      "id": "g28-part1",
+      "title": "G28 暮色的殘虛 第一部",
+      "category": "story",
+      "groupId": "g28",
+      "needsReview": false,
+      "kr": {
+        "date": "2026-01-15",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893279",
+            "title": "G28 暮色的殘虛 第一部"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      }
+    },
+    {
+      "id": "g28-part2",
+      "title": "G28 暮色的殘虛 第二部",
+      "category": "story",
+      "groupId": "g28",
+      "needsReview": false,
+      "kr": {
+        "date": "2026-02-12",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://kr-newsroom.nexon.com/press-center/3376035",
+            "title": "G28 暮色的殘虛 第二部"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      }
+    },
+    {
+      "id": "reaction-1",
+      "title": "RE:ACTION 第一階段",
+      "category": "major",
+      "groupId": "reaction",
+      "needsReview": false,
+      "kr": {
+        "date": "2026-07-09",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893633",
+            "title": "RE:ACTION 第一階段"
+          },
+          {
+            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893639",
+            "title": "正式伺服器已套用開發者筆記"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      }
+    },
+    {
+      "id": "reaction-2",
+      "title": "RE:ACTION 第二階段",
+      "category": "major",
+      "groupId": "reaction",
+      "needsReview": false,
+      "kr": {
+        "date": "2026-08-13",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893714",
+            "title": "RE:ACTION 第二階段"
+          },
+          {
+            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893721",
+            "title": "正式伺服器已套用開發者筆記"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      }
+    },
+    {
+      "id": "witch-hat-2026",
+      "title": "瑪奇 × 魔法帽的工作室",
+      "category": "collaboration",
+      "groupId": null,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-10-15",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893883",
+            "title": "瑪奇 × 魔法帽的工作室"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      }
+    }
+  ]
+}
