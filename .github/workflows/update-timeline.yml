@@ -42,7 +42,7 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Restore official-page cache
         if: github.event_name != 'pull_request'
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: .cache/timeline
           key: timeline-v1-${{ runner.os }}-${{ github.run_id }}
@@ -53,6 +53,12 @@ jobs:
       - name: Validate catalog offline for pull requests
         if: github.event_name == 'pull_request'
         run: python scripts/update_timeline.py --offline
+      - name: Preserve fetched-page cache even when parsing fails
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/timeline
+          key: timeline-v1-${{ runner.os }}-${{ github.run_id }}
       - name: Upload JSON result
         uses: actions/upload-artifact@v4
         with:
