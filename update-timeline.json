@@ -45,7 +45,7 @@
     },
     {
       "id": "new-rise",
-      "title": "NEW RISE（嶄新冒險）",
+      "title": "NEW RISE",
       "category": "major",
       "krStartDate": "2025-07-10",
       "krEndDate": "2025-08-12",
@@ -57,7 +57,7 @@
     },
     {
       "id": "new-life",
-      "title": "NEW LIFE（新生活）",
+      "title": "NEW LIFE",
       "category": "major",
       "krStartDate": "2025-12-11",
       "krEndDate": "2025-12-11",
@@ -80,7 +80,7 @@
     },
     {
       "id": "reaction",
-      "title": "RE:ACTION（再次行動，暫譯）",
+      "title": "RE:ACTION",
       "category": "major",
       "krStartDate": "2026-07-09",
       "krEndDate": "2026-08-13",
@@ -335,7 +335,7 @@
     },
     {
       "id": "new-rise-1",
-      "title": "NEW RISE（嶄新冒險） 第1波：地下城、裝備成長、繼承與細工改革",
+      "title": "NEW RISE 第1波：地下城、裝備成長、繼承與細工改革",
       "category": "major",
       "groupId": "new-rise",
       "curated": true,
@@ -346,7 +346,7 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892875",
-            "title": "NEW RISE（嶄新冒險） 第1波：地下城、裝備成長、繼承與細工改革｜韓版官方公告",
+            "title": "NEW RISE 第1波：地下城、裝備成長、繼承與細工改革｜韓版官方公告",
             "originalTitle": "NEW RISE 第1波：地下城、裝備成長、繼承與細工改革｜韓版官方公告"
           }
         ]
@@ -357,7 +357,7 @@
         "sources": [
           {
             "url": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=15874",
-            "title": "NEW RISE（嶄新冒險）改版更新指南",
+            "title": "NEW RISE改版更新指南",
             "originalTitle": "NEW RISE改版更新指南"
           }
         ],
@@ -375,7 +375,7 @@
     },
     {
       "id": "new-rise-2",
-      "title": "NEW RISE（嶄新冒險） 第2波／祕法R4：幻變槍手、禁忌鍊金士",
+      "title": "NEW RISE 第2波／祕法R4：幻變槍手、禁忌鍊金士",
       "category": "major",
       "groupId": "new-rise",
       "curated": true,
@@ -386,7 +386,7 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892951",
-            "title": "NEW RISE（嶄新冒險） 第2波／祕法R4：幻變槍手、禁忌鍊金士｜韓版官方公告",
+            "title": "NEW RISE 第2波／祕法R4：幻變槍手、禁忌鍊金士｜韓版官方公告",
             "originalTitle": "NEW RISE 第2波／祕法R4：幻變槍手、禁忌鍊金士｜韓版官方公告"
           }
         ]
@@ -397,7 +397,7 @@
         "sources": [
           {
             "url": "https://tw-event.beanfun.com/mabinogi/EventAD/EventAD.aspx?EventADID=16135",
-            "title": "NEW RISE（嶄新冒險）第二波改版指南",
+            "title": "NEW RISE第二波改版指南",
             "originalTitle": "NEW RISE第二波改版指南"
           }
         ],
@@ -575,7 +575,7 @@
     },
     {
       "id": "new-life-1",
-      "title": "NEW LIFE（新生活）：生活協會、生活賽季、專家效果、農場與生產更新",
+      "title": "NEW LIFE：生活協會、生活賽季、專家效果、農場與生產更新",
       "category": "major",
       "groupId": "new-life",
       "curated": true,
@@ -586,7 +586,7 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893212",
-            "title": "NEW LIFE（新生活）：生活協會、生活賽季、專家效果、農場與生產更新｜韓版官方公告",
+            "title": "NEW LIFE：生活協會、生活賽季、專家效果、農場與生產更新｜韓版官方公告",
             "originalTitle": "NEW LIFE：生活協會、生活賽季、專家效果、農場與生產更新｜韓版官方公告"
           }
         ]
@@ -597,7 +597,7 @@
         "sources": [
           {
             "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=82456",
-            "title": "NEW LIFE（新生活）開機公告",
+            "title": "NEW LIFE開機公告",
             "originalTitle": "NEW LIFE開機公告"
           }
         ],
@@ -1084,7 +1084,7 @@
     },
     {
       "id": "reaction-1",
-      "title": "RE:ACTION（再次行動，暫譯） 第1波：祕法覺醒、歐甘符文",
+      "title": "RE:ACTION 第1波：祕法覺醒、歐甘符文",
       "category": "major",
       "groupId": "reaction",
       "curated": true,
@@ -1095,7 +1095,7 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893633",
-            "title": "RE:ACTION（再次行動，暫譯） 第1波：祕法覺醒、歐甘符文｜韓版官方公告",
+            "title": "RE:ACTION 第1波：祕法覺醒、歐甘符文｜韓版官方公告",
             "originalTitle": "RE:ACTION 第1波：祕法覺醒、歐甘符文｜韓版官方公告"
           }
         ]
@@ -1114,7 +1114,7 @@
       "titleLocale": "zh-TW",
       "titleTranslation": {
         "method": "glossary",
-        "provisionalTerms": true
+        "provisionalTerms": false
       }
     },
     {
@@ -1154,7 +1154,7 @@
     },
     {
       "id": "reaction-2",
-      "title": "RE:ACTION（再次行動，暫譯） 第2波：覺醒上限50級、專屬覺醒技能",
+      "title": "RE:ACTION 第2波：覺醒上限50級、專屬覺醒技能",
       "category": "major",
       "groupId": "reaction",
       "curated": true,
@@ -1165,7 +1165,7 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893714",
-            "title": "RE:ACTION（再次行動，暫譯） 第2波：覺醒上限50級、專屬覺醒技能｜韓版官方公告",
+            "title": "RE:ACTION 第2波：覺醒上限50級、專屬覺醒技能｜韓版官方公告",
             "originalTitle": "RE:ACTION 第2波：覺醒上限50級、專屬覺醒技能｜韓版官方公告"
           }
         ]
@@ -1184,7 +1184,7 @@
       "titleLocale": "zh-TW",
       "titleTranslation": {
         "method": "glossary",
-        "provisionalTerms": true
+        "provisionalTerms": false
       }
     },
     {
@@ -1373,7 +1373,7 @@
       "region": "kr",
       "reason": "待整理為具體功能項目，不直接顯示於時間軸。",
       "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892882",
-      "title": "[已套用] NEW RISE（嶄新冒險） 第一階段 更新",
+      "title": "[已套用] NEW RISE 第一階段 更新",
       "publishedDate": "2025-07-10",
       "releaseDate": "2025-07-10",
       "checkedDate": "2026-10-26",
@@ -1463,7 +1463,7 @@
       "region": "kr",
       "reason": "待整理為具體功能項目，不直接顯示於時間軸。",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893632",
-      "title": "RE:ACTION（再次行動，暫譯） 第一階段 更新公告",
+      "title": "RE:ACTION 第一階段 更新公告",
       "publishedDate": "2026-07-09",
       "releaseDate": null,
       "checkedDate": "2026-10-26",
@@ -1473,7 +1473,7 @@
       "region": "kr",
       "reason": "待整理為具體功能項目，不直接顯示於時間軸。",
       "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893639",
-      "title": "[已套用] RE:ACTION（再次行動，暫譯） 第一階段 更新",
+      "title": "[已套用] RE:ACTION 第一階段 更新",
       "publishedDate": "2026-07-09",
       "releaseDate": "2026-07-09",
       "checkedDate": "2026-10-26",
@@ -1493,7 +1493,7 @@
       "region": "kr",
       "reason": "待整理為具體功能項目，不直接顯示於時間軸。",
       "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893723",
-      "title": "RE:ACTION（再次行動，暫譯） 第二階段 更新公告",
+      "title": "RE:ACTION 第二階段 更新公告",
       "publishedDate": "2026-08-13",
       "releaseDate": null,
       "checkedDate": "2026-10-26",
@@ -1503,7 +1503,7 @@
       "region": "kr",
       "reason": "待整理為具體功能項目，不直接顯示於時間軸。",
       "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893721",
-      "title": "[已套用] RE:ACTION（再次行動，暫譯） 第二階段 更新",
+      "title": "[已套用] RE:ACTION 第二階段 更新",
       "publishedDate": "2026-08-13",
       "releaseDate": "2026-08-13",
       "checkedDate": "2026-10-26",
@@ -1542,7 +1542,7 @@
   ],
   "localization": {
     "locale": "zh-TW",
-    "revision": 1,
+    "revision": 2,
     "policy": "台版官方名稱優先；未定名專有名詞保留原文並附繁中暫譯；原文獨立保存。"
   }
 }

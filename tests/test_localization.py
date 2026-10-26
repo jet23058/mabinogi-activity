@@ -29,7 +29,11 @@ class LocalizationTests(unittest.TestCase):
         self.assertIn("全新 地下城", title)
         self.assertTrue(provisional)
         title = m.Localizer(self.glossary, offline=True).title("RE:ACTION 第一階段")[0]
-        self.assertEqual(title, "RE:ACTION（再次行動，暫譯） 第一階段")
+        self.assertEqual(title, "RE:ACTION 第一階段")
+        for name in ("NEW RISE", "NEW LIFE", "RE:ACTION"):
+            title, _, provisional = m.Localizer(self.glossary, offline=True).title(name)
+            self.assertEqual(title, name)
+            self.assertFalse(provisional)
 
     def test_new_quoted_name_is_translated_once_and_cached_for_offline(self):
         calls = []
