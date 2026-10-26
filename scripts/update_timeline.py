@@ -303,7 +303,9 @@ def build(catalog, kr, tw, today):
         event["curated"] = True
         event["categoryLabel"] = CATEGORIES[event["category"]]
         event["importance"] = "major" if event["category"] in ("story", "major") else "normal"
-        event["tw"]["label"] = {"pending": "尚未找到台版公告（待確認）", "released": "已實裝", "announced": "已公告"}[event["tw"]["status"]]
+        event["tw"]["label"] = {"pending": "實裝日期待確認", "released": "已實裝", "announced": "已公告"}[event["tw"]["status"]]
+        if event["tw"].get("matchStatus") == "partial":
+            event["tw"]["label"] = "部分對應（個別項目待核對）"
         terms = catalog.get("twSearchTerms", {}).get(event["id"], [])
         matches = [r for r in tw if terms and any(t.casefold() in (r["title"] + " " + r["text"]).casefold() for t in terms)]
         # Search matches are suggestions, never automatically treated as releases.

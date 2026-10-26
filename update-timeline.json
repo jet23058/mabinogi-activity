@@ -200,7 +200,7 @@
             "originalTitle": "台版G27開機公告（第2部獨立日期未確認）"
           }
         ],
-        "label": "尚未找到台版公告（待確認）",
+        "label": "實裝日期待確認",
         "candidateSources": []
       },
       "note": "台版2025/07/17有G27開機公告，但第2部獨立開放日仍未確認；不以整章公告日期代替第2部實裝日。",
@@ -1029,7 +1029,7 @@
           }
         ],
         "matchStatus": "partial",
-        "label": "已實裝",
+        "label": "部分對應（個別項目待核對）",
         "candidateSources": []
       },
       "note": "台版2026/09/17公告包含相關平衡調整；個別技能與數值仍須逐項對照，不能視為整包完全一致。",
@@ -1104,7 +1104,7 @@
         "date": null,
         "status": "pending",
         "sources": [],
-        "label": "尚未找到台版公告（待確認）",
+        "label": "實裝日期待確認",
         "candidateSources": []
       },
       "note": "尚未查得台版對應實裝公告。",
@@ -1139,7 +1139,7 @@
         "date": null,
         "status": "pending",
         "sources": [],
-        "label": "尚未找到台版公告（待確認）",
+        "label": "實裝日期待確認",
         "candidateSources": []
       },
       "note": "尚未查得台版對應實裝公告。",
@@ -1174,7 +1174,7 @@
         "date": null,
         "status": "pending",
         "sources": [],
-        "label": "尚未找到台版公告（待確認）",
+        "label": "實裝日期待確認",
         "candidateSources": []
       },
       "note": "尚未查得台版對應實裝公告。",
@@ -1209,7 +1209,7 @@
         "date": null,
         "status": "pending",
         "sources": [],
-        "label": "尚未找到台版公告（待確認）",
+        "label": "實裝日期待確認",
         "candidateSources": []
       },
       "note": "尚未查得台版對應實裝公告。",
@@ -1244,7 +1244,7 @@
         "date": null,
         "status": "pending",
         "sources": [],
-        "label": "尚未找到台版公告（待確認）",
+        "label": "實裝日期待確認",
         "candidateSources": []
       },
       "note": "尚未查得台版對應實裝公告。",
@@ -1279,7 +1279,7 @@
         "date": null,
         "status": "pending",
         "sources": [],
-        "label": "尚未找到台版公告（待確認）",
+        "label": "實裝日期待確認",
         "candidateSources": []
       },
       "note": "尚未查得台版對應活動公告。",
@@ -1314,7 +1314,7 @@
         "date": null,
         "status": "pending",
         "sources": [],
-        "label": "尚未找到台版公告（待確認）",
+        "label": "實裝日期待確認",
         "candidateSources": []
       },
       "note": "尚未找到明確對應的台版公告，套用日期待確認。",
