@@ -203,6 +203,7 @@ def crawl_kr(client, archive, today):
                 break
         else:
             raise ValueError(f"KR {kind} pagination limit reached before {SINCE}")
+    print(f"KR index: {len(rows)} relevant notices", flush=True)
     for row in rows.values():
         # Revisit recent details so corrections by the publisher can be detected.
         if not row.get("checkedDate") or row["publishedDate"] >= today[:7] + "-01":
@@ -242,16 +243,24 @@ def crawl_tw(client, archive, today):
             if url not in rows or published >= today[:7] + "-01":
                 detail = json.loads(client.get(f"{TW}/api/Bullentin/GetBullentin?Bid={bid}"))
                 row = detail.get("data", {}).get("myDataSet", {}).get("table", {})
-                if detail.get("code") != 1 or str(row.get("bullentinId")) != bid or not isinstance(row.get("content"), str):
-                    raise ValueError(f"TW detail mismatch: {bid}")
-                doc = Document(row["content"])
+                if isinstance(row, list):
+                    row = row[0] if row else {}
+                # Some index entries redirect to campaigns and have no API body.
+                # Keep index evidence and any earlier successfully fetched body.
+                available = detail.get("code") == 1 and isinstance(row, dict) and str(row.get("bullentinId")) == bid and isinstance(row.get("content"), str)
+                if not available and url in rows:
+                    continue
+                doc = Document(row["content"] if available else "")
                 links = sorted({urljoin(TW + "/", a.attrs["href"]) for a in doc.root.walk() if a.tag == "a" and a.attrs.get("href") and official(urljoin(TW + "/", a.attrs["href"]), "tw")})
-                rows[url] = {"url": url, "title": title, "publishedDate": published, "text": doc.root.text(), "links": links}
+                rows[url] = {"url": url, "title": title, "publishedDate": published, "text": doc.root.text(), "links": links, "detailStatus": "available" if available else "unavailable"}
+                if not available:
+                    print(f"TW {bid}: campaign entry without readable API body; kept as index-only candidate", flush=True)
         dates = [iso(r.get("startDate")) for r in fresh]
         if (dates and all(d and d < SINCE for d in dates)) or page >= int(data.get("totalPage", page + 1)):
             break
     else:
         raise ValueError("TW pagination limit reached")
+    print(f"TW index: {len(rows)} relevant notices", flush=True)
     return sorted(rows.values(), key=lambda r: (r["publishedDate"], r["url"]))
 
 
