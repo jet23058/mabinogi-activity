@@ -73,3 +73,30 @@ class ResearchTests(unittest.TestCase):
         self.assertFalse(evidence({"text": body}, body, "2026-10-16"))
         self.assertFalse(evidence({"text": body}, "2026年10月15日新增新的神祕副本", "2026-10-15"))
         self.assertFalse(evidence({"text": body}, "新增環境設定匯入與匯出功能。", "2026-10-15"))
+
+    def test_budget_exhaustion_keeps_pending_features_and_resumes(self):
+        quote = "2026年10月15日更新：新增環境設定匯入與匯出功能。"
+        url = "https://mabinogi.nexon.com/page/news/notice_view.asp?id=1"
+        archive = {"kr": [{"url": url, "text": quote}], "tw": []}
+
+        class LimitedModel:
+            def ask(self, payload):
+                if "knownFeatures" in payload:
+                    return {"features": [{"title": "環境設定匯入／匯出", "category": "minor", "releaseDate": "2026-10-15", "quote": quote}]}
+                raise ResearchBudgetReached()
+
+        partial, _, state = research({"events": []}, archive, None, LimitedModel(), {}, "2026-10-26")
+        self.assertEqual(len(partial["events"]), 1)
+        self.assertEqual(partial["events"][0]["tw"]["status"], "pending")
+        self.assertNotIn("twFingerprint", state[url])
+
+        class ResumedModel:
+            def ask(self, payload):
+                self.assert_match_only = "knownFeatures" not in payload
+                return {"status": "pending"}
+
+        model = ResumedModel()
+        resumed, _, state = research(partial, archive, None, model, state, "2026-10-26")
+        self.assertTrue(model.assert_match_only)
+        self.assertEqual(resumed, partial)
+        self.assertIn("twFingerprint", state[url])

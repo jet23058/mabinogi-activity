@@ -70,13 +70,12 @@ Action 使用 `--research`：
 4. 保留既有人工日期、部分對應與G27日期待確認等註記；AI新發現的候選修正列入待核對資料。
 5. 新功能自動加入輸出；資料不足保持待確認，查證結果以 `research-state.json` 與 Actions 快取避免重複請求。失敗不覆蓋已發布JSON。
 
-需要在此儲存庫的 Settings → Secrets and variables → Actions 設定：
+目前 Action 使用下方的 Copilot CLI 設定，不需要新增 Secrets。若在本機改用替代的 OpenAI 相容 API 後端，可設定環境變數：
 
-- Secret `TIMELINE_AI_API_KEY`，或沿用 `GEMINI_API_KEY`。
-- 可選 Variables：`TIMELINE_AI_BASE_URL`、`TIMELINE_AI_MODEL`，支援 OpenAI 相容的 HTTPS Chat Completions 服務。
-- 預設使用 Gemini 官方相容端點與 `gemini-3.8-flash`；可指定其他供應商與模型。
+- `TIMELINE_AI_PROVIDER=api`，以及 `TIMELINE_AI_API_KEY`（或 `GEMINI_API_KEY`）。
+- `TIMELINE_AI_BASE_URL`、`TIMELINE_AI_MODEL`：指定供應商支援的 HTTPS Chat Completions 端點與模型。
 
-只送出公開官方公告及詞庫。缺少金鑰會在設定檢查步驟明確失敗，不會把「僅爬完資料」宣稱成研究完成。首次回補需分析2025年起的公告，後續以內容與台版來源指紋快取增量更新。API用量依供應商方案計費。
+只送出公開官方公告及詞庫。缺少驗證設定會明確失敗。首次回補需分析2025年起的公告，後續以內容與台版來源指紋快取增量更新。用量依所選供應商方案計算。
 
 研究測試使用模型替身，驗證提取、台版匹配、逐字證據、日期與快取；它不代表已完成真實供應商的端到端驗證。
 
@@ -94,4 +93,3 @@ Action 已改用 Copilot CLI 1.0.103，透過內建 `GITHUB_TOKEN` 與 `copilot-
 - CLI只接受stdin內的公開資料並輸出JSON；停用內建MCP及工具，不授權讀寫專案檔案或執行shell。
 - Gemini／OpenAI相容API後端仍可透過 `TIMELINE_AI_PROVIDER` 改為其他值並提供原先的API設定，在本機研究時使用。Action目前固定選用Copilot。
 
-上方 Gemini 金鑰設定只適用於替代API後端，目前預設Action不需要那些Secrets。
