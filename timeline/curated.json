@@ -1,10 +1,15 @@
 {
   "schemaVersion": 1,
+  "selectionPolicy": {
+    "mode": "curated-features",
+    "description": "一筆代表具體功能、劇情章節、改版階段或合作；例行維護、籠統更新公告與零碎修正不直接列入。"
+  },
   "groupTitles": {
+    "g27": "G27 安樂的庭園",
     "g28": "G28 暮色的殘虛",
-    "reaction": "RE:ACTION",
     "new-rise": "NEW RISE",
-    "new-life": "NEW LIFE"
+    "new-life": "NEW LIFE",
+    "reaction": "RE:ACTION"
   },
   "twSearchTerms": {
     "g28-part1": [
@@ -14,219 +19,638 @@
     "g28-part2": [
       "G28",
       "暮色的殘虛"
-    ],
-    "new-rise-1": [
-      "NEW RISE"
-    ],
-    "new-life-1": [
-      "NEW LIFE",
-      "生活系統"
-    ],
-    "reaction-1": [
-      "RE:ACTION"
-    ],
-    "reaction-2": [
-      "RE:ACTION"
-    ],
-    "sacred-guard": [
-      "聖盾守衛"
-    ],
-    "forbidden-alchemist": [
-      "禁忌鍊金士"
-    ],
-    "witch-hat-2026": [
-      "魔法帽",
-      "工作室"
-    ],
-    "dungeon-entry": [
-      "地下城入場"
-    ],
-    "samhain-2025": [
-      "薩溫"
     ]
   },
   "events": [
     {
-      "id": "dungeon-entry",
-      "title": "地下城入場方式調整",
-      "category": "minor",
+      "id": "blast-lancer",
+      "title": "新祕法：爆裂槍兵",
+      "category": "major",
       "groupId": null,
+      "curated": true,
       "needsReview": false,
       "kr": {
-        "date": "2025-03-13",
+        "date": "2025-01-16",
         "status": "released",
         "sources": [
           {
-            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892645",
-            "title": "地下城入場方式調整"
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892509",
+            "title": "新祕法：爆裂槍兵｜韓版官方公告"
           }
         ]
       },
       "tw": {
-        "date": null,
-        "status": "pending",
-        "sources": []
+        "date": "2025-06-19",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=74605",
+            "title": "R3版本開機公告"
+          }
+        ]
       }
     },
     {
-      "id": "sacred-guard",
-      "title": "聖盾守衛技能改善",
-      "category": "minor",
-      "groupId": null,
+      "id": "g27-part2",
+      "title": "G27《安樂的庭園》第2部",
+      "category": "story",
+      "groupId": "g27",
+      "curated": true,
       "needsReview": false,
       "kr": {
-        "date": "2025-04-03",
+        "date": "2025-01-16",
         "status": "released",
         "sources": [
           {
-            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892694",
-            "title": "聖盾守衛技能改善"
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892509",
+            "title": "G27《安樂的庭園》第2部｜韓版官方公告"
           }
         ]
       },
       "tw": {
         "date": null,
         "status": "pending",
-        "sources": []
+        "sources": [
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=74861",
+            "title": "台版G27開機公告（第2部獨立日期未確認）"
+          }
+        ]
+      },
+      "note": "台版2025/07/17有G27開機公告，但第2部獨立開放日仍未確認；不以整章公告日期代替第2部實裝日。"
+    },
+    {
+      "id": "bri-leith-launch",
+      "title": "布里萊赫地下城初次推出",
+      "category": "major",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-01-16",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892509",
+            "title": "布里萊赫地下城初次推出｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2025-08-14",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=75097",
+            "title": "G27第二波開機公告"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bri-leith-final",
+      "title": "布里萊赫最終章：雷楠的米勒",
+      "category": "major",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-02-20",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892577",
+            "title": "布里萊赫最終章：雷楠的米勒｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2025-09-11",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=75308",
+            "title": "最終章開機公告"
+          }
+        ]
+      }
+    },
+    {
+      "id": "arcana-lance-balance",
+      "title": "祕法與騎士槍平衡調整",
+      "category": "minor",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-03-20",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892655",
+            "title": "祕法與騎士槍平衡調整｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2025-06-19",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://tw-event.beanfun.com/mabinogi/EventAD/EventAD.aspx?EventADID=13002",
+            "title": "6月份戰鬥平衡：祕法與技能變更"
+          }
+        ]
+      }
+    },
+    {
+      "id": "magic-damage-formula",
+      "title": "魔法傷害公式改革",
+      "category": "minor",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-05-08",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892757",
+            "title": "魔法傷害公式改革｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2025-06-19",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://tw-event.beanfun.com/mabinogi/EventAD/EventAD.aspx?EventADID=13011",
+            "title": "6月份戰鬥平衡：魔法攻擊力公式"
+          }
+        ]
       }
     },
     {
       "id": "new-rise-1",
-      "title": "NEW RISE 第一階段",
+      "title": "NEW RISE 第1波：地下城、裝備成長、繼承與細工改革",
       "category": "major",
       "groupId": "new-rise",
+      "curated": true,
       "needsReview": false,
       "kr": {
         "date": "2025-07-10",
         "status": "released",
         "sources": [
           {
-            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892882",
-            "title": "NEW RISE 第一階段"
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892875",
+            "title": "NEW RISE 第1波：地下城、裝備成長、繼承與細工改革｜韓版官方公告"
           }
         ]
       },
       "tw": {
-        "date": null,
-        "status": "pending",
-        "sources": []
-      }
-    },
-    {
-      "id": "forbidden-alchemist",
-      "title": "禁忌鍊金士改善",
-      "category": "minor",
-      "groupId": null,
-      "needsReview": false,
-      "kr": {
-        "date": "2025-08-21",
+        "date": "2025-12-18",
         "status": "released",
         "sources": [
           {
-            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4892977",
-            "title": "禁忌鍊金士改善"
+            "url": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=15874",
+            "title": "NEW RISE改版更新指南"
+          }
+        ]
+      }
+    },
+    {
+      "id": "new-rise-2",
+      "title": "NEW RISE 第2波／祕法R4：幻變槍手、禁忌鍊金士",
+      "category": "major",
+      "groupId": "new-rise",
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-08-12",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4892951",
+            "title": "NEW RISE 第2波／祕法R4：幻變槍手、禁忌鍊金士｜韓版官方公告"
           }
         ]
       },
       "tw": {
-        "date": null,
-        "status": "pending",
-        "sources": []
+        "date": "2026-01-22",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://tw-event.beanfun.com/mabinogi/EventAD/EventAD.aspx?EventADID=16135",
+            "title": "NEW RISE第二波改版指南"
+          }
+        ]
       }
     },
     {
-      "id": "samhain-2025",
-      "title": "2025 薩溫節更新",
+      "id": "echostone-upgrade",
+      "title": "回音石金幣升級、古代音樂盒直達與相關改善",
       "category": "minor",
       "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-09-11",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893022",
+            "title": "回音石金幣升級、古代音樂盒直達與相關改善｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2026-01-22",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://tw-event.beanfun.com/mabinogi/EventAD/EventAD.aspx?EventADID=16135",
+            "title": "第二波指南「十五、回音石相關改善」"
+          }
+        ]
+      }
+    },
+    {
+      "id": "recipe-favorites",
+      "title": "生產配方收藏／我的最愛",
+      "category": "minor",
+      "groupId": null,
+      "curated": true,
       "needsReview": false,
       "kr": {
         "date": "2025-10-16",
         "status": "released",
         "sources": [
           {
-            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893094",
-            "title": "2025 薩溫節更新"
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893089",
+            "title": "生產配方收藏／我的最愛｜韓版官方公告"
           }
         ]
       },
       "tw": {
-        "date": null,
-        "status": "pending",
-        "sources": []
+        "date": "2026-02-26",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=16305",
+            "title": "2月份改善事項「便利性改善」"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bri-leith-rift",
+      "title": "布里萊赫「信仰裂隙」",
+      "category": "major",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-11-20",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893148",
+            "title": "布里萊赫「信仰裂隙」｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2026-05-21",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=17640",
+            "title": "布里萊赫第四關改版說明"
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra-equipment-free",
+      "title": "額外裝備欄位使用免費化",
+      "category": "minor",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2025-11-29",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893176",
+            "title": "額外裝備欄位使用免費化｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2026-03-26",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=17388",
+            "title": "3月份改善事項「額外裝備欄位改善」"
+          }
+        ]
       }
     },
     {
       "id": "new-life-1",
-      "title": "NEW LIFE 生活系統改版",
+      "title": "NEW LIFE：生活協會、生活賽季、專家效果、農場與生產更新",
       "category": "major",
       "groupId": "new-life",
+      "curated": true,
       "needsReview": false,
       "kr": {
         "date": "2025-12-11",
         "status": "released",
         "sources": [
           {
-            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893223",
-            "title": "NEW LIFE 生活系統改版"
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893212",
+            "title": "NEW LIFE：生活協會、生活賽季、專家效果、農場與生產更新｜韓版官方公告"
           }
         ]
       },
       "tw": {
-        "date": null,
-        "status": "pending",
-        "sources": []
+        "date": "2026-08-20",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=82456",
+            "title": "NEW LIFE開機公告"
+          }
+        ]
       }
     },
     {
       "id": "g28-part1",
-      "title": "G28 暮色的殘虛 第一部",
+      "title": "G28《暮色的殘虛》第1部",
       "category": "story",
       "groupId": "g28",
+      "curated": true,
       "needsReview": false,
       "kr": {
         "date": "2026-01-15",
         "status": "released",
         "sources": [
           {
-            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893279",
-            "title": "G28 暮色的殘虛 第一部"
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893281",
+            "title": "G28《暮色的殘虛》第1部｜韓版官方公告"
           }
         ]
       },
       "tw": {
-        "date": null,
-        "status": "pending",
-        "sources": []
+        "date": "2026-06-18",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=80938",
+            "title": "G28改版開機公告"
+          }
+        ]
+      }
+    },
+    {
+      "id": "debuff-rules",
+      "title": "減益、破防效果規則整合",
+      "category": "minor",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-01-29",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893308",
+            "title": "減益、破防效果規則整合｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2026-04-23",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://tw-event.beanfun.com/mabinogi/EventAD/EventAD.aspx?EventADID=17531",
+            "title": "4月份改善事項「減益效果變更」"
+          }
+        ]
       }
     },
     {
       "id": "g28-part2",
-      "title": "G28 暮色的殘虛 第二部",
+      "title": "G28《暮色的殘虛》第2部",
       "category": "story",
       "groupId": "g28",
+      "curated": true,
       "needsReview": false,
       "kr": {
         "date": "2026-02-12",
         "status": "released",
         "sources": [
           {
-            "url": "https://kr-newsroom.nexon.com/press-center/3376035",
-            "title": "G28 暮色的殘虛 第二部"
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893329",
+            "title": "G28《暮色的殘虛》第2部｜韓版官方公告"
           }
         ]
       },
       "tw": {
-        "date": null,
-        "status": "pending",
-        "sources": []
+        "date": "2026-07-02",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.beanfun.com/News?catId=inside&bid=81037",
+            "title": "開機公告「第二部2nd開放」"
+          }
+        ]
+      }
+    },
+    {
+      "id": "arcana-r5",
+      "title": "祕法R5：旋律人偶師、狂怒鬥士",
+      "category": "major",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-02-12",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893329",
+            "title": "祕法R5：旋律人偶師、狂怒鬥士｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2026-07-23",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://tw-event.beanfun.com/mabinogi/EventAD/EventAD.aspx?EventADID=18921",
+            "title": "R5祕法改版更新指南"
+          }
+        ]
+      }
+    },
+    {
+      "id": "guard-bard-rework",
+      "title": "聖盾守衛、聖詠者重製",
+      "category": "minor",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-05-14",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893513",
+            "title": "聖盾守衛、聖詠者重製｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2026-09-17",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=19136",
+            "title": "祕法改版與平衡"
+          }
+        ]
+      }
+    },
+    {
+      "id": "settings-import-export",
+      "title": "環境設定匯入／匯出",
+      "category": "minor",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-05-14",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893513",
+            "title": "環境設定匯入／匯出｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2026-10-15",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=20202",
+            "title": "10月份改善事項「環境設定匯出／匯入」"
+          }
+        ]
+      }
+    },
+    {
+      "id": "crom-bas-abyss",
+      "title": "喀輪巴斯深淵難度及相關成長內容",
+      "category": "major",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-05-28",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893543",
+            "title": "喀輪巴斯深淵難度及相關成長內容｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2026-09-17",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=19126",
+            "title": "喀輪巴斯深淵難度改版說明"
+          }
+        ]
+      }
+    },
+    {
+      "id": "combat-balance-202606",
+      "title": "祕法、武器與戰鬥平衡調整",
+      "category": "minor",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-06-18",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893577",
+            "title": "祕法、武器與戰鬥平衡調整｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2026-09-17",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=19138",
+            "title": "戰鬥平衡"
+          },
+          {
+            "url": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=19136",
+            "title": "祕法改版與平衡"
+          }
+        ],
+        "matchStatus": "partial"
+      },
+      "note": "台版2026/09/17公告包含相關平衡調整；個別技能與數值仍須逐項對照，不能視為整包完全一致。"
+    },
+    {
+      "id": "dungeon-practice-analyzer",
+      "title": "地下城練習模式、戰鬥分析器",
+      "category": "minor",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-06-18",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893577",
+            "title": "地下城練習模式、戰鬥分析器｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": "2026-09-17",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi-event.beanfun.com/EventAD/EventAD?EventADID=19137",
+            "title": "9月份改善事項"
+          }
+        ]
       }
     },
     {
       "id": "reaction-1",
-      "title": "RE:ACTION 第一階段",
+      "title": "RE:ACTION 第1波：祕法覺醒、歐甘符文",
       "category": "major",
       "groupId": "reaction",
+      "curated": true,
       "needsReview": false,
       "kr": {
         "date": "2026-07-09",
@@ -234,11 +658,7 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893633",
-            "title": "RE:ACTION 第一階段"
-          },
-          {
-            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893639",
-            "title": "正式伺服器已套用開發者筆記"
+            "title": "RE:ACTION 第1波：祕法覺醒、歐甘符文｜韓版官方公告"
           }
         ]
       },
@@ -246,13 +666,15 @@
         "date": null,
         "status": "pending",
         "sources": []
-      }
+      },
+      "note": "尚未查得台版對應實裝公告。"
     },
     {
       "id": "reaction-2",
-      "title": "RE:ACTION 第二階段",
+      "title": "RE:ACTION 第2波：覺醒上限50級、專屬覺醒技能",
       "category": "major",
       "groupId": "reaction",
+      "curated": true,
       "needsReview": false,
       "kr": {
         "date": "2026-08-13",
@@ -260,11 +682,7 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893714",
-            "title": "RE:ACTION 第二階段"
-          },
-          {
-            "url": "https://mabinogi.nexon.com/page/news/update_view.asp?id=4893721",
-            "title": "正式伺服器已套用開發者筆記"
+            "title": "RE:ACTION 第2波：覺醒上限50級、專屬覺醒技能｜韓版官方公告"
           }
         ]
       },
@@ -272,13 +690,87 @@
         "date": null,
         "status": "pending",
         "sources": []
-      }
+      },
+      "note": "尚未查得台版對應實裝公告。"
+    },
+    {
+      "id": "erg-gold-infusion",
+      "title": "聚能可用金幣代替材料注入",
+      "category": "minor",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-08-13",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893714",
+            "title": "聚能可用金幣代替材料注入｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      },
+      "note": "尚未查得台版對應實裝公告。"
+    },
+    {
+      "id": "tala-gah",
+      "title": "新副本 탈라 가흐、新防具製作與賦予",
+      "category": "major",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-09-10",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893828",
+            "title": "新副本 탈라 가흐、新防具製作與賦予｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      },
+      "note": "尚未查得台版對應實裝公告。"
+    },
+    {
+      "id": "combo-card-rework",
+      "title": "連續技卡全面改版",
+      "category": "major",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-10-15",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893882",
+            "title": "連續技卡全面改版｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      },
+      "note": "尚未查得台版對應實裝公告。"
     },
     {
       "id": "witch-hat-2026",
-      "title": "瑪奇 × 魔法帽的工作室",
+      "title": "《魔法帽的工作室》合作活動",
       "category": "collaboration",
       "groupId": null,
+      "curated": true,
       "needsReview": false,
       "kr": {
         "date": "2026-10-15",
@@ -286,7 +778,7 @@
         "sources": [
           {
             "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893883",
-            "title": "瑪奇 × 魔法帽的工作室"
+            "title": "《魔法帽的工作室》合作活動｜韓版官方公告"
           }
         ]
       },
@@ -294,7 +786,32 @@
         "date": null,
         "status": "pending",
         "sources": []
-      }
+      },
+      "note": "尚未查得台版對應活動公告。"
+    },
+    {
+      "id": "server-performance",
+      "title": "農場、額外裝備欄位等伺服器效能改善",
+      "category": "minor",
+      "groupId": null,
+      "curated": true,
+      "needsReview": false,
+      "kr": {
+        "date": "2026-10-22",
+        "status": "released",
+        "sources": [
+          {
+            "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893891",
+            "title": "農場、額外裝備欄位等伺服器效能改善｜韓版官方公告"
+          }
+        ]
+      },
+      "tw": {
+        "date": null,
+        "status": "pending",
+        "sources": []
+      },
+      "note": "尚未找到明確對應的台版公告，套用日期待確認。"
     }
   ]
 }

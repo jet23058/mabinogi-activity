@@ -280,29 +280,27 @@ def validate_event(event):
             assert official(source["url"], region), "Non-official source"
 
 
+def routine_patch_notice(title):
+    return bool(re.search(r"정식\s*서버.*(?:패치|업데이트).*변경점\s*안내|正式伺服器更新內容公告", title))
+
+
 def build(catalog, kr, tw, today):
     events = copy.deepcopy(catalog["events"])
     covered = {s["url"] for e in events for s in e["kr"]["sources"]}
     review = []
     for row in kr:
-        if row["url"] in covered:
+        # Raw patch notices remain in source-index as evidence. They are never
+        # promoted to visible events: a feature needs a meaningful curated title.
+        if row["url"] in covered or routine_patch_notice(row["title"]):
             continue
-        release = row.get("releaseDate")
-        if not release or not SINCE <= release <= today:
-            review.append({"region": "kr", "reason": "正式實裝日期待確認", **row})
-            continue
-        category, group = classify(row["title"])
-        identifier = "kr-" + re.search(r"[?&]id=(\d+)", row["url"])[1]
-        events.append({"id": identifier, "title": row["title"], "category": category,
-                       "groupId": group, "needsReview": True,
-                       "kr": {"date": release, "status": "released", "sources": [{"url": row["url"], "title": row["title"]}]},
-                       "tw": {"date": None, "status": "pending", "sources": []},
-                       "note": "韓版正式公告自動收錄；中文名稱、分類與台版對應待核對。"})
+        review.append({"region": "kr", "reason": "待整理為具體功能項目，不直接顯示於時間軸。", **row})
     ids = set()
     for event in events:
         validate_event(event)
+        assert not routine_patch_notice(event["title"]), "Use a concrete feature title instead of a patch headline"
         assert event["id"] not in ids, "Duplicate event id"
         ids.add(event["id"])
+        event["curated"] = True
         event["categoryLabel"] = CATEGORIES[event["category"]]
         event["importance"] = "major" if event["category"] in ("story", "major") else "normal"
         event["tw"]["label"] = {"pending": "尚未找到台版公告（待確認）", "released": "已實裝", "announced": "已公告"}[event["tw"]["status"]]
@@ -320,6 +318,7 @@ def build(catalog, kr, tw, today):
     groups.sort(key=lambda g: (g["krStartDate"] or "9999", g["id"]))
     return {"schemaVersion": 1, "asOf": today, "locale": "zh-TW", "sortBy": "kr.date",
             "coverage": {"from": SINCE, "to": today, "complete": False, "note": "已核對項目與官網自動收錄；非所有更新的完整清單。待確認不代表台版尚未實裝。"},
+            "selectionPolicy": copy.deepcopy(catalog.get("selectionPolicy", {"mode": "curated-features"})),
             "categories": [{"id": key, "label": value} for key, value in CATEGORIES.items()],
             "groups": groups, "events": events, "reviewQueue": review}
 
@@ -357,7 +356,7 @@ def main():
     write(ROOT / "timeline/translations.json", localizer.cache)
     write(ROOT / "timeline/source-index.json", archive)
     write(ROOT / "update-timeline.json", result)
-    print(f"Built {len(result['events'])} events / {len(result['groups'])} groups, {len(result['reviewQueue'])} dates pending review")
+    print(f"Built {len(result['events'])} events / {len(result['groups'])} groups, {len(result['reviewQueue'])} announcements awaiting feature review")
 
 
 if __name__ == "__main__":

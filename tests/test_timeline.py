@@ -69,19 +69,34 @@ class TimelineTests(unittest.TestCase):
         self.assertEqual(len(next(g for g in result["groups"] if g["id"] == "g28")["eventIds"]), 2)
         event = next(e for e in result["events"] if e["id"] == "g28-part1")
         self.assertTrue(event["tw"]["candidateSources"])
-        self.assertEqual(event["tw"]["status"], "pending")
-        self.assertIsNone(event["tw"]["date"])
+        self.assertEqual(event["tw"]["status"], "released")
+        self.assertEqual(event["tw"]["date"], "2026-06-18")
         broken = copy.deepcopy(event)
         broken["tw"] = {"date": "2026-06-18", "status": "released", "sources": []}
         with self.assertRaises(AssertionError):
             m.validate_event(broken)
 
-    def test_auto_items_have_stable_ids_and_unconfirmed_tw(self):
+    def test_patch_notices_never_become_timeline_items_and_new_features_wait_for_review(self):
         row = {"title": "9/10(목) 정식 서버 패치 작업 변경점 안내", "url": m.KR + "/page/news/notice_view.asp?id=999", "publishedDate": "2026-09-08", "releaseDate": "2026-09-10"}
-        result = m.build({"events": []}, [row], [], "2026-10-26")
-        self.assertEqual(result["events"][0]["id"], "kr-999")
-        self.assertTrue(result["events"][0]["needsReview"])
-        self.assertEqual(result["events"][0]["tw"]["status"], "pending")
+        feature = {**row, "title": "全新地下城功能更新", "url": m.KR + "/page/news/notice_view.asp?id=1000"}
+        result = m.build({"events": []}, [row, feature], [], "2026-10-26")
+        self.assertEqual(result["events"], [])
+        self.assertEqual([item["url"] for item in result["reviewQueue"]], [feature["url"]])
+        self.assertEqual(result["selectionPolicy"]["mode"], "curated-features")
+
+    def test_reference_features_keep_ambiguous_and_partial_tw_matches(self):
+        catalog = m.read(m.ROOT / "timeline/curated.json", {})
+        result = m.build(catalog, [], [], "2026-10-26")
+        self.assertEqual(len(result["events"]), 29)
+        events = {event["id"]: event for event in result["events"]}
+        self.assertIsNone(events["g27-part2"]["tw"]["date"])
+        self.assertEqual(events["g27-part2"]["tw"]["status"], "pending")
+        self.assertTrue(events["g27-part2"]["tw"]["sources"])
+        self.assertEqual(events["combat-balance-202606"]["tw"]["matchStatus"], "partial")
+        self.assertEqual(len(events["combat-balance-202606"]["tw"]["sources"]), 2)
+        for identifier in ("blast-lancer", "g27-part2", "bri-leith-launch"):
+            self.assertIn("id=4892509", events[identifier]["kr"]["sources"][0]["url"])
+        self.assertFalse(any(m.routine_patch_notice(event["title"]) for event in result["events"]))
 
 
 if __name__ == "__main__":

@@ -54,17 +54,16 @@ class LocalizationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Missing offline"):
             m.Localizer(self.glossary, offline=True).title("미지의 이름")
 
-    def test_all_archived_titles_have_chinese_and_preserve_original_sources(self):
-        archive = json.loads((ROOT / "timeline/source-index.json").read_text(encoding="utf-8"))
+    def test_published_titles_have_chinese_and_preserve_original_sources(self):
+        published = json.loads((ROOT / "update-timeline.json").read_text(encoding="utf-8"))
         cache_path = ROOT / "timeline/translations.json"
         cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
         localizer = m.Localizer(self.glossary, cache, offline=True)
-        for row in archive["kr"]:
+        # Raw archives may include intentionally excluded notices; only published
+        # features and review candidates require localized display titles.
+        for row in published["events"] + published.get("reviewQueue", []):
             with self.subTest(title=row["title"]):
-                title = localizer.title(row["title"])[0]
-                self.assertRegex(title, r"[\u3400-\u9fff]")
-                if m.HANGUL.search(row["title"]):
-                    self.assertNotEqual(title, row["title"])
+                self.assertRegex(row["title"], r"[\u3400-\u9fff]")
         raw = {"events": [{"title": "神聖盾衛技能改善", "kr": {"sources": [{"title": "[적용됨] 세이크리드 가드 개선 업데이트"}]}, "tw": {"sources": []}}], "groups": [], "reviewQueue": []}
         localized = localizer.apply(raw)
         self.assertEqual(localized["events"][0]["title"], "聖盾守衛技能改善")
