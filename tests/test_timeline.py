@@ -9,6 +9,23 @@ SPEC.loader.exec_module(m)
 
 
 class TimelineTests(unittest.TestCase):
+    def test_tw_campaign_without_body_keeps_index_evidence(self):
+        class Client:
+            def get(self, url, payload=None, **kwargs):
+                import json
+                if payload is not None:
+                    return json.dumps({"code": 1, "data": {"totalPage": 1, "bulletins": [
+                        {"bullentinId": 83717, "startDate": "2026-10-01", "title": "G28 campaign"}
+                    ]}})
+                return json.dumps({"code": 1, "data": {"myDataSet": {"table": []}}})
+
+        rows = m.crawl_tw(Client(), [], "2026-10-26")
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["detailStatus"], "unavailable")
+        self.assertEqual(rows[0]["text"], "")
+        previous = {**rows[0], "text": "previous evidence", "detailStatus": "available"}
+        self.assertEqual(m.crawl_tw(Client(), [previous], "2026-10-26")[0], previous)
+
     def test_kr_list_date_is_scoped_to_row_and_deduplicated(self):
         page = '''<ul><li><a href="notice_view.asp?id=1">G28 更新</a><span>2026.01.13</span></li>
         <li><a href="notice_view.asp?id=2">其他更新</a><span>2026.02.10</span></li>
