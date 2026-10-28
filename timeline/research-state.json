@@ -22,5 +22,24 @@
     "digest": "b5484f0ca5c98c85cdf26e94997936b8f22dd9b2516e678dcc077b16f51fc7ba",
     "features": [],
     "twFingerprint": "61a5715d097b04d510463c7e53a1cef8e1ec70369e0d7a2b8bb3ffdd7f255bf8"
+  },
+  "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893902": {
+    "digest": "4638a492e1ece74722c813758967f740be9379e116a8fa179ee4b37d50749d15",
+    "features": [
+      {
+        "title": "伺服器延遲改善",
+        "category": "minor",
+        "groupId": null,
+        "existingId": "server-performance",
+        "releaseDate": "2026-10-29",
+        "quote": "2026년 10월 29일(목) 패치로 변경되는 항목을 안내드립니다. 🔄 개선 사항 [시스템] ◈ 특정 상황에서 발생하는 서버 지연 현상이 개선됩니다. - 스킬 및 시스템 자체에 변경되는 사양은 없으며, 특정 상황에서 서버 지연 현상이 발생할 수 있는 부분들을 개선하였습니다.",
+        "twSearchTerms": [
+          "伺服器延遲改善",
+          "伺服器效能改善",
+          "雷電鎖鏈 多重目標"
+        ]
+      }
+    ],
+    "twFingerprint": "61a5715d097b04d510463c7e53a1cef8e1ec70369e0d7a2b8bb3ffdd7f255bf8"
   }
 }
