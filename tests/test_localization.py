@@ -2,6 +2,8 @@ import importlib.util
 import json
 from pathlib import Path
 import unittest
+from unittest.mock import Mock
+from urllib.error import HTTPError
 
 ROOT = Path(__file__).resolve().parents[1]
 SPEC = importlib.util.spec_from_file_location("localization", ROOT / "scripts/timeline_localization.py")
@@ -63,21 +65,54 @@ class LocalizationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Missing offline"):
             m.Localizer(self.glossary, offline=True).title("미지의 이름")
 
-    def test_collaboration_review_title_recovers_changed_tokens_and_caches(self):
+    def test_collaboration_title_recovers_changed_tokens_and_caches(self):
         calls = []
         def translator(text):
             calls.append(text)
             return "被改動的專名 全時活動" if "MABITERM" in text else "全時"
         original = "[마비노기 X 고깔모자의 아틀리에] 온타임 이벤트 (11/5~11/12)"
-        raw = {"events": [], "groups": [], "reviewQueue": [{"title": original}]}
         localizer = m.Localizer(self.glossary, translator=translator)
-        row = localizer.apply(raw)["reviewQueue"][0]
-        self.assertEqual(row["title"], "[瑪奇 X 고깔모자의 아틀리에（魔法帽的工作室）] 全時 活動 (11/5~11/12)")
-        self.assertEqual(row["originalTitle"], original)
-        self.assertEqual(raw["reviewQueue"][0]["title"], original)
+        title = localizer.title(original)
+        self.assertEqual(title[0], "[瑪奇 X 고깔모자의 아틀리에（魔法帽的工作室）] 全時 活動 (11/5~11/12)")
         self.assertNotIn("MABITERM", calls[-1])
         self.assertEqual(calls[-1], "온타임")
-        self.assertEqual(m.Localizer(self.glossary, localizer.cache, offline=True).apply(raw), localizer.apply(raw))
+        self.assertEqual(m.Localizer(self.glossary, localizer.cache, offline=True).title(original), title)
+
+    def test_uncached_review_title_does_not_call_rate_limited_provider(self):
+        translator = Mock(side_effect=HTTPError("https://translate.googleapis.com/", 429, "Too Many Requests", {}, None))
+        original = "[마비노기 X 고깔모자의 아틀리에] 온타임 이벤트 (11/5~11/12)"
+        raw = {"events": [{"title": "神聖盾衛技能改善", "kr": {"sources": []}, "tw": {"sources": []}}],
+               "groups": [], "reviewQueue": [{"title": original, "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=1", "text": "原始證據"}]}
+        output = m.Localizer(self.glossary, translator=translator).apply(raw)
+        translator.assert_not_called()
+        self.assertEqual(output["events"][0]["title"], "聖盾守衛技能改善")
+        row = output["reviewQueue"][0]
+        self.assertEqual(row["title"], original)
+        self.assertEqual(row["originalTitle"], original)
+        self.assertEqual(row["text"], "原始證據")
+        self.assertEqual(row["titleLocale"], "ko")
+        self.assertEqual(row["titleTranslation"]["method"], "pending")
+        self.assertEqual(output["localization"]["pendingReviewTitles"], 1)
+        self.assertNotIn("originalTitle", raw["reviewQueue"][0])
+
+    def test_review_titles_reuse_glossary_and_cache_without_network(self):
+        original = "브리 레흐 희망의 빛"
+        seed = m.Localizer(self.glossary, translator=lambda _: "MABITERM0000TOKEN 希望之光")
+        expected = seed.title(original)[0]
+        translator = Mock(side_effect=AssertionError("review must not request translation"))
+        raw = {"events": [], "groups": [], "reviewQueue": [{"title": original}, {"title": "신규 던전 업데이트 안내"}]}
+        output = m.Localizer(self.glossary, seed.cache, translator=translator).apply(raw)
+        translator.assert_not_called()
+        self.assertEqual(output["reviewQueue"][0]["title"], expected)
+        self.assertEqual(output["reviewQueue"][1]["title"], "全新 地下城 更新公告")
+        self.assertEqual(output["localization"]["pendingReviewTitles"], 0)
+
+    def test_published_event_translation_remains_strict_during_outage(self):
+        error = HTTPError("https://translate.googleapis.com/", 429, "Too Many Requests", {}, None)
+        for item in ({"title": "미지의 기능", "kr": {"sources": []}, "tw": {"sources": []}},
+                     {"title": "功能改善", "kr": {"sources": [{"title": "미지의 기능"}]}, "tw": {"sources": []}}):
+            with self.subTest(item=item), self.assertRaises(HTTPError):
+                m.Localizer(self.glossary, translator=Mock(side_effect=error)).apply({"events": [item], "groups": [], "reviewQueue": []})
 
     def test_duplicate_protected_token_cannot_duplicate_a_reviewed_name(self):
         def translator(text):
@@ -114,9 +149,8 @@ class LocalizationTests(unittest.TestCase):
         cache_path = ROOT / "timeline/translations.json"
         cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
         localizer = m.Localizer(self.glossary, cache, offline=True)
-        # Raw archives may include intentionally excluded notices; only published
-        # features and review candidates require localized display titles.
-        for row in published["events"] + published.get("reviewQueue", []):
+        # Review candidates are internal evidence and may explicitly await translation.
+        for row in published["events"]:
             with self.subTest(title=row["title"]):
                 self.assertRegex(row["title"], r"[\u3400-\u9fff]")
         raw = {"events": [{"title": "神聖盾衛技能改善", "kr": {"sources": [{"title": "[적용됨] 세이크리드 가드 개선 업데이트"}]}, "tw": {"sources": []}}], "groups": [], "reviewQueue": []}
