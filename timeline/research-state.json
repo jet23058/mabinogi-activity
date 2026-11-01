@@ -41,5 +41,10 @@
       }
     ],
     "twFingerprint": "61a5715d097b04d510463c7e53a1cef8e1ec70369e0d7a2b8bb3ffdd7f255bf8"
+  },
+  "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893905": {
+    "digest": "f95d81ca1bdd404e63b1355c0a8c06ece991ad611a3d8d148e581fc7ef8b159b",
+    "features": [],
+    "twFingerprint": "27339e97cca21d4d2efda340ae8243e51e3d9444586c481dfd441fa41a1592fc"
   }
 }
