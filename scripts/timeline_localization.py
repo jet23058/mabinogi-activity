@@ -56,13 +56,26 @@ class Localizer:
         self.translator = translator
         self.memo = {}
 
-    def machine(self, text):
+    def machine(self, text, *, protected=()):
         key = hashlib.sha256(f"{self.glossary.get('revision', 1)}:{text}".encode()).hexdigest()
         translated = self.cache.get(key, {}).get("title")
         if not translated:
             if self.offline:
                 raise ValueError(f"Missing offline zh-TW translation: {text}")
             translated = self.translator(text)
+        if protected and isinstance(translated, str):
+            tokens = re.compile("(" + "|".join(re.escape(token) for token in protected) + ")")
+            if tokens.findall(translated) != tokens.findall(text):
+                # Some MT responses translate, drop or reorder placeholder text.
+                # Translate only the surrounding fragments in that case; reviewed
+                # names, punctuation and whitespace stay under our control.
+                parts = tokens.split(text)
+                for index, part in enumerate(parts):
+                    if part not in protected and HANGUL.search(part):
+                        hangul = list(HANGUL.finditer(part))
+                        start, end = hangul[0].start(), hangul[-1].end()
+                        parts[index] = part[:start] + self.machine(part[start:end]) + part[end:]
+                translated = "".join(parts)
         if not isinstance(translated, str) or not translated.strip() or HANGUL.search(translated) or not re.search(r"[\u3400-\u9fff]", translated):
             raise ValueError(f"Incomplete zh-TW translation: {text}")
         self.cache[key] = {"original": text, "title": translated.strip()}
@@ -103,9 +116,7 @@ class Localizer:
         text = re.sub(r"['\"‘“「]([^'\"’”」]+)['\"’”」]", quoted_name, text)
         if HANGUL.search(text):
             # Hash both the input and glossary revision; revised official names invalidate MT.
-            translated = self.machine(text)
-            if any(token not in translated for token in protected):
-                raise ValueError(f"Translation changed a protected name: {original}")
+            translated = self.machine(text, protected=protected)
             text, method = translated.strip(), "machine"
         for token, display in protected.items():
             text = text.replace(token, display)

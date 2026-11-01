@@ -51,12 +51,63 @@ class LocalizationTests(unittest.TestCase):
         self.assertEqual(m.Localizer(self.glossary, localizer.cache, offline=True).title(text)[0], title)
 
     def test_bad_translation_cannot_replace_reviewed_names(self):
-        with self.assertRaisesRegex(ValueError, "protected name"):
-            m.Localizer(self.glossary, translator=lambda _: "錯誤譯名").title("브리 레흐 희망의 빛")
+        calls = []
+        def translator(text):
+            calls.append(text)
+            return "錯誤譯名" if "MABITERM" in text else "希望之光"
+        title = m.Localizer(self.glossary, translator=translator).title("브리 레흐 희망의 빛")[0]
+        self.assertEqual(title, "布里萊赫 希望之光")
+        self.assertEqual(calls[-1], "희망의 빛")
         with self.assertRaisesRegex(ValueError, "Incomplete"):
             m.Localizer(self.glossary, translator=lambda text: text).title("미지의 이름")
         with self.assertRaisesRegex(ValueError, "Missing offline"):
             m.Localizer(self.glossary, offline=True).title("미지의 이름")
+
+    def test_collaboration_review_title_recovers_changed_tokens_and_caches(self):
+        calls = []
+        def translator(text):
+            calls.append(text)
+            return "被改動的專名 全時活動" if "MABITERM" in text else "全時"
+        original = "[마비노기 X 고깔모자의 아틀리에] 온타임 이벤트 (11/5~11/12)"
+        raw = {"events": [], "groups": [], "reviewQueue": [{"title": original}]}
+        localizer = m.Localizer(self.glossary, translator=translator)
+        row = localizer.apply(raw)["reviewQueue"][0]
+        self.assertEqual(row["title"], "[瑪奇 X 고깔모자의 아틀리에（魔法帽的工作室）] 全時 活動 (11/5~11/12)")
+        self.assertEqual(row["originalTitle"], original)
+        self.assertEqual(raw["reviewQueue"][0]["title"], original)
+        self.assertNotIn("MABITERM", calls[-1])
+        self.assertEqual(calls[-1], "온타임")
+        self.assertEqual(m.Localizer(self.glossary, localizer.cache, offline=True).apply(raw), localizer.apply(raw))
+
+    def test_duplicate_protected_token_cannot_duplicate_a_reviewed_name(self):
+        def translator(text):
+            return "MABITERM0000TOKEN 希望 MABITERM0000TOKEN" if "MABITERM" in text else "希望之光"
+        title = m.Localizer(self.glossary, translator=translator).title("브리 레흐 희망의 빛")[0]
+        self.assertEqual(title, "布里萊赫 希望之光")
+
+    def test_protected_name_fallback_still_rejects_incomplete_translation(self):
+        def translator(text):
+            return "被改動的專名" if "MABITERM" in text else "희망의 빛"
+        localizer = m.Localizer(self.glossary, translator=translator)
+        with self.assertRaisesRegex(ValueError, "Incomplete"):
+            localizer.title("브리 레흐 희망의 빛")
+        self.assertFalse(localizer.cache, "failed translations must not enter the cache")
+
+    def test_valid_legacy_cache_needs_no_fragment_translations(self):
+        text = "MABITERM0000TOKEN 희망의 빛"
+        key = m.hashlib.sha256(f"{self.glossary['revision']}:{text}".encode()).hexdigest()
+        cache = {key: {"original": text, "title": "MABITERM0000TOKEN 希望之光"}}
+        title = m.Localizer(self.glossary, cache, offline=True).title("브리 레흐 희망의 빛")[0]
+        self.assertEqual(title, "布里萊赫 希望之光")
+
+    def test_reordered_or_repeated_names_keep_original_order_and_count(self):
+        for text in ("브리 레흐 희망의 빛 에코스톤", "브리 레흐 희망의 빛 브리 레흐"):
+            with self.subTest(text=text):
+                def translator(value):
+                    return "MABITERM0001TOKEN 希望 MABITERM0000TOKEN" if "MABITERM" in value else "希望之光"
+                title = m.Localizer(self.glossary, translator=translator).title(text)[0]
+                suffix = "回音石" if text.endswith("에코스톤") else "布里萊赫"
+                self.assertEqual(title, f"布里萊赫 希望之光 {suffix}")
 
     def test_published_titles_have_chinese_and_preserve_original_sources(self):
         published = json.loads((ROOT / "update-timeline.json").read_text(encoding="utf-8"))
