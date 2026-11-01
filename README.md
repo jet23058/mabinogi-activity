@@ -31,7 +31,7 @@
 
 [Update KR-TW timeline](.github/workflows/update-timeline.yml) 每天台灣時間 10:35 執行，也支援手動執行及相關檔案變更觸發。排程時間可能因 GitHub 排隊延後。
 
-Action 執行測試、抓取韓台官網、更新來源索引，依已整理的功能清單產生 JSON，將變更提交回 `main`。抓取或翻譯失敗會保留上一份有效 JSON。前幾頁 HTTP 快取保留六小時，較舊頁面保留七天，失敗時也保存已取得的快取。
+Action 執行測試、抓取韓台官網、更新來源索引，依已整理的功能清單產生 JSON，將變更提交回 `main`。抓取或正式改版項目翻譯失敗會保留上一份有效 JSON。待審公告不要求連線翻譯，不會因其翻譯服務限流而阻止發布。前幾頁 HTTP 快取保留六小時，較舊頁面保留七天，失敗時也保存已取得的快取。
 
 公開資料網址：
 
@@ -46,6 +46,8 @@ https://raw.githubusercontent.com/jet23058/mabinogi-activity/main/update-timelin
 固定格式離線翻譯；未知標題與引號內新名詞視需要使用 Google 公開網頁翻譯端點轉成 `zh-TW`，逐字串保存於 `timeline/translations.json`。這不是具 SLA 的付費 Cloud API，僅傳送公開標題，不傳送公告內文或使用者資料。增修官方詞庫時請提高 `revision`。
 
 原文保存在 `originalTitle`；對外顯示使用 `title`。機器翻譯不能作為台版官方定名或實裝證據。若翻譯失敗、仍含未處理韓文或改動受保護的名稱，本輪不覆蓋有效資料。
+
+上述嚴格要求適用於正式 `events` 及其來源標題。內部 `reviewQueue` 尚未整理為功能，不在擴充功能時間軸顯示；其標題只套用詞庫或既有翻譯快取，不呼叫外部翻譯服務。缺少有效譯文時保留原文與全部證據，標記 `titleTranslation.method: pending` 及原文語系，並以 `localization.pendingReviewTitles` 回報數量。待審公告不會被當成已翻譯的正式功能，整理進正式項目時仍須通過完整驗證。
 
 ## 本機驗證
 
@@ -92,4 +94,3 @@ Action 已改用 Copilot CLI 1.0.103，透過內建 `GITHUB_TOKEN` 與 `copilot-
 - 一次CLI呼叫仍可能消耗多個模型回合及token，呼叫數上限不等於費用或免費額度保證。額度不足或帳號驗證失敗時不覆蓋有效JSON。
 - CLI只接受stdin內的公開資料並輸出JSON；停用內建MCP及工具，不授權讀寫專案檔案或執行shell。
 - Gemini／OpenAI相容API後端仍可透過 `TIMELINE_AI_PROVIDER` 改為其他值並提供原先的API設定，在本機研究時使用。Action目前固定選用Copilot。
-

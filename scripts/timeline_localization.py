@@ -1,7 +1,7 @@
 """Traditional Chinese titles: reviewed glossary, reusable rules, then cached MT.
 
-Raw Korean evidence is always kept separately. A translation failure aborts the
-build before generated files are replaced, rather than publishing raw headlines.
+Published feature titles remain strict. Internal review candidates use only the
+glossary/cache, retaining original evidence and a pending flag when unavailable.
 """
 from __future__ import annotations
 
@@ -171,9 +171,26 @@ class Localizer:
         for group in output["groups"]:
             group["originalTitle"] = group["title"]
             group["title"] = self.glossary.get("groupTitles", {}).get(group["id"], self.title(group["title"])[0])
+        # Candidates are evidence awaiting curation, never visible timeline items.
+        # Their optional translations must not make publishing depend on MT.
+        review_localizer = Localizer(self.glossary, self.cache, offline=True)
+        review_localizer.memo.update(self.memo)
+        pending_reviews = 0
         for row in output.get("reviewQueue", []):
-            row["originalTitle"] = row["title"]
-            row["title"] = self.title(row["title"])[0]
+            original = row["title"]
+            row["originalTitle"] = original
+            try:
+                row["title"], method, provisional = review_localizer.title(original)
+                row["titleLocale"] = "zh-TW"
+                row["titleTranslation"] = {"method": method, "provisionalTerms": provisional}
+            except ValueError:
+                # Missing/invalid offline translations remain explicitly pending.
+                row["title"] = original
+                row["titleLocale"] = "ko" if HANGUL.search(original) else "und"
+                row["titleTranslation"] = {"method": "pending", "reason": "missing-or-invalid-cached-translation"}
+                pending_reviews += 1
         output["localization"] = {"locale": "zh-TW", "revision": self.glossary.get("revision", 1),
+                                  "pendingReviewTitles": pending_reviews,
+                                  "reviewQueuePolicy": "僅使用詞庫及既有快取；未翻譯原文保留待整理，不作為正式顯示項目。",
                                   "policy": "台版官方名稱優先；未定名專有名詞保留原文並附繁中暫譯；原文獨立保存。"}
         return output

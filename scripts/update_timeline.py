@@ -384,6 +384,8 @@ def main():
     write(ROOT / "timeline/source-index.json", archive)
     write(ROOT / "update-timeline.json", result)
     print(f"Built {len(result['events'])} events / {len(result['groups'])} groups, {len(result['reviewQueue'])} announcements awaiting feature review")
+    pending = result["localization"].get("pendingReviewTitles", 0)
+    print(f"Review queue: {pending} original titles awaiting translation (not displayed as timeline items)")
 
 
 if __name__ == "__main__":

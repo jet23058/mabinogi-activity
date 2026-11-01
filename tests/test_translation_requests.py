@@ -78,6 +78,30 @@ class TranslationRequestTests(unittest.TestCase):
 
 
 class TranslationResumeTests(unittest.TestCase):
+    def test_full_catalog_generation_with_uncached_review_and_unavailable_translator(self):
+        catalog = timeline.read(ROOT / "timeline/curated.json", {})
+        archive = timeline.read(ROOT / "timeline/source-index.json", {"kr": [], "tw": []})
+        original = "[마비노기 X 고깔모자의 아틀리에] 온타임 이벤트 (11/5~11/12)"
+        candidate = {"title": original, "url": "https://mabinogi.nexon.com/page/news/notice_view.asp?id=99999999",
+                     "publishedDate": "2026-11-01", "text": "原文證據"}
+        kr = copy.deepcopy(archive["kr"]) + [candidate]
+        translator = MagicMock(side_effect=http_error())
+        factory = lambda *args, **kwargs: localization.Localizer(*args, translator=translator, **kwargs)
+        with TemporaryDirectory(dir=ROOT) as directory:
+            root = Path(directory)
+            timeline.write(root / "timeline/curated.json", catalog)
+            timeline.write(root / "timeline/localization.json", timeline.read(ROOT / "timeline/localization.json", {}))
+            timeline.write(root / "timeline/translations.json", timeline.read(ROOT / "timeline/translations.json", {}))
+            with patch.object(timeline, "ROOT", root), patch.object(sys, "argv", ["update_timeline.py", "--today", "2026-11-01"]), patch.object(timeline, "Client"), patch.object(timeline, "crawl_kr", return_value=kr), patch.object(timeline, "crawl_tw", return_value=archive["tw"]), patch.object(timeline, "Localizer", side_effect=factory):
+                timeline.main()
+            translator.assert_not_called()
+            result = timeline.read(root / "update-timeline.json", {})
+            self.assertEqual(len(result["events"]), len(catalog["events"]))
+            row = next(r for r in result["reviewQueue"] if r["url"] == candidate["url"])
+            self.assertEqual(row["originalTitle"], original)
+            self.assertEqual(row["titleTranslation"]["method"], "pending")
+            self.assertEqual(timeline.read(root / "timeline/source-index.json", {})["kr"][-1], candidate)
+
     def test_failed_generation_preserves_data_and_resumes_successful_translations(self):
         raw = {"events": [{"title": title, "kr": {"sources": []}, "tw": {"sources": []}}
                           for title in ("첫 번째", "두 번째")], "groups": [], "reviewQueue": []}
