@@ -369,9 +369,17 @@ def main():
     result = build(catalog, archive["kr"], archive["tw"], args.today)
     result["reviewQueue"].extend(findings)
     assert result["events"], "Refusing to publish an empty timeline"
-    localizer = Localizer(read(ROOT / "timeline/localization.json", {}),
-                          read(ROOT / "timeline/translations.json", {}), offline=args.offline)
-    result = localizer.apply(result)
+    # The existing Actions page cache is saved even when this run fails. Keep
+    # successful translations there too, so a later run resumes after a 429.
+    translation_cache = Path(args.cache_dir) / "translations.json"
+    cached = {} if args.offline else read(translation_cache, {})
+    cached.update(read(ROOT / "timeline/translations.json", {}))
+    localizer = Localizer(read(ROOT / "timeline/localization.json", {}), cached, offline=args.offline)
+    try:
+        result = localizer.apply(result)
+    finally:
+        if not args.offline:
+            write(translation_cache, localizer.cache)
     write(ROOT / "timeline/translations.json", localizer.cache)
     write(ROOT / "timeline/source-index.json", archive)
     write(ROOT / "update-timeline.json", result)

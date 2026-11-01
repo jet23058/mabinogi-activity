@@ -9,6 +9,10 @@ import copy
 import hashlib
 import json
 import re
+import time
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
@@ -41,8 +45,35 @@ def translate_public_title(text):
     query = urlencode({"client": "gtx", "sl": "ko", "tl": "zh-TW", "dt": "t", "q": text})
     request = Request("https://translate.googleapis.com/translate_a/single?" + query,
                       headers={"User-Agent": "MabinogiActivityTimeline/1.0"})
-    with urlopen(request, timeout=25) as response:
-        payload = json.loads(response.read().decode("utf-8"))
+    delay = 2.0
+    for attempt in range(4):
+        # Includes the first request and fragment translations, to avoid bursts.
+        time.sleep(delay)
+        try:
+            with urlopen(request, timeout=25) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            break
+        except HTTPError as error:
+            if error.code not in (429, 500, 502, 503, 504) or attempt == 3:
+                raise
+            delay = 5.0 * 2 ** attempt
+            retry_after = error.headers.get("Retry-After") if error.headers else None
+            if retry_after:
+                try:
+                    wait = float(retry_after)
+                except ValueError:
+                    try:
+                        wait = (parsedate_to_datetime(retry_after) - datetime.now(timezone.utc)).total_seconds()
+                    except (TypeError, ValueError, OverflowError):
+                        wait = 0
+                delay = max(delay, wait)
+            if delay > 60:
+                # Do not retry sooner than the server asks, or wait indefinitely.
+                raise
+        except (URLError, TimeoutError):
+            if attempt == 3:
+                raise
+            delay = 5.0 * 2 ** attempt
     if not isinstance(payload, list) or not isinstance(payload[0], list):
         raise ValueError("Unexpected translation response")
     return "".join(part[0] for part in payload[0] if isinstance(part, list) and part and isinstance(part[0], str))
