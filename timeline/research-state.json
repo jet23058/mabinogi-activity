@@ -24,7 +24,7 @@
     "twFingerprint": "61a5715d097b04d510463c7e53a1cef8e1ec70369e0d7a2b8bb3ffdd7f255bf8"
   },
   "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893902": {
-    "digest": "4638a492e1ece74722c813758967f740be9379e116a8fa179ee4b37d50749d15",
+    "digest": "fe57129d0e6925a02b9d4cef2d72be150ee301f60c339be644351b45aef6916c",
     "features": [
       {
         "title": "伺服器延遲改善",
@@ -32,19 +32,24 @@
         "groupId": null,
         "existingId": "server-performance",
         "releaseDate": "2026-10-29",
-        "quote": "2026년 10월 29일(목) 패치로 변경되는 항목을 안내드립니다. 🔄 개선 사항 [시스템] ◈ 특정 상황에서 발생하는 서버 지연 현상이 개선됩니다. - 스킬 및 시스템 자체에 변경되는 사양은 없으며, 특정 상황에서 서버 지연 현상이 발생할 수 있는 부분들을 개선하였습니다.",
+        "quote": "2026년 10월 29일(목) 패치로 변경되는 항목을 안내드립니다. 🔄 개선 사항 [시스템] ◈ 특정 상황에서 발생하는 서버 지연 현상이 개선됩니다. - 스킬 및 시스템 자체에 변경되는 사양은 없으며, 특정 상황에서 서버 지연 현상이 발생할 수 있는 부분들을 개선하였습니다. : [썬더], [라이트닝 체인] 스킬이 다중 타겟을 대상으로 하거나 장애물이 있을 경우 확인하는 구조 일부가 수정됩니다. : [추가 장비 슬롯] 변경 시 정보 갱신 구조 일부가 수정됩니다. : 특성 [이면을 보는 눈] 사용 시 타겟 탐색 과정 구조 일부가 수정됩니다.",
         "twSearchTerms": [
           "伺服器延遲改善",
-          "伺服器效能改善",
-          "雷電鎖鏈 多重目標"
+          "雷擊",
+          "閃電鍊成",
+          "額外裝備欄位",
+          "看穿另一面"
         ]
       }
     ],
-    "twFingerprint": "61a5715d097b04d510463c7e53a1cef8e1ec70369e0d7a2b8bb3ffdd7f255bf8"
+    "twFingerprint": "27339e97cca21d4d2efda340ae8243e51e3d9444586c481dfd441fa41a1592fc"
   },
   "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893905": {
     "digest": "f95d81ca1bdd404e63b1355c0a8c06ece991ad611a3d8d148e581fc7ef8b159b",
     "features": [],
     "twFingerprint": "27339e97cca21d4d2efda340ae8243e51e3d9444586c481dfd441fa41a1592fc"
+  },
+  "server-performance:27339e97cca21d4d2efda340ae8243e51e3d9444586c481dfd441fa41a1592fc": {
+    "status": "pending"
   }
 }
