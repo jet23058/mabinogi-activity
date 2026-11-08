@@ -42,7 +42,7 @@
         ]
       }
     ],
-    "twFingerprint": "27339e97cca21d4d2efda340ae8243e51e3d9444586c481dfd441fa41a1592fc"
+    "twFingerprint": "8aa87db9ac28cf77934b6741e542df977469ddf8ac76d2cb7fe3b931a20b93e0"
   },
   "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893905": {
     "digest": "f95d81ca1bdd404e63b1355c0a8c06ece991ad611a3d8d148e581fc7ef8b159b",
@@ -82,5 +82,8 @@
       }
     ],
     "twFingerprint": "8aa87db9ac28cf77934b6741e542df977469ddf8ac76d2cb7fe3b931a20b93e0"
+  },
+  "server-performance:8aa87db9ac28cf77934b6741e542df977469ddf8ac76d2cb7fe3b931a20b93e0": {
+    "status": "pending"
   }
 }
