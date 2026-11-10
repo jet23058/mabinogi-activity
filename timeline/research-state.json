@@ -85,5 +85,112 @@
   },
   "server-performance:8aa87db9ac28cf77934b6741e542df977469ddf8ac76d2cb7fe3b931a20b93e0": {
     "status": "pending"
+  },
+  "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893919": {
+    "digest": "2bab542e59c61a90e8faddd7d3ef0b6322a476f87c6a3701d943df312eb3d657",
+    "features": [
+      {
+        "title": "탈라 가흐地下城新增「困難」難度",
+        "category": "major",
+        "groupId": "tala-gah",
+        "existingId": null,
+        "releaseDate": "2026-11-12",
+        "quote": "2026년 11월 12일(목) 패치로 변경되는 항목을 안내드립니다. / [탈라 가흐] 던전의 신규 난이도 [어려움]이 추가됩니다.",
+        "twSearchTerms": [
+          "탈라 가흐",
+          "탈라 가흐 困難難度",
+          "塔拉加赫 地下城"
+        ]
+      },
+      {
+        "title": "伺服器延遲與多項操作效能改善",
+        "category": "minor",
+        "groupId": "server-performance",
+        "existingId": "server-performance",
+        "releaseDate": "2026-11-12",
+        "quote": "2026년 11월 12일(목) 패치로 변경되는 항목을 안내드립니다. / 서버 지연 현상이 개선됩니다.",
+        "twSearchTerms": [
+          "伺服器延遲改善",
+          "伺服器效能優化"
+        ]
+      },
+      {
+        "title": "美容欄新增篩選與箭頭切換外觀",
+        "category": "minor",
+        "groupId": null,
+        "existingId": null,
+        "releaseDate": "2026-11-12",
+        "quote": "2026년 11월 12일(목) 패치로 변경되는 항목을 안내드립니다. / [드레스 룸]의 뷰티 슬롯 UI에 필터 및 화살표 이동 기능이 추가됩니다.",
+        "twSearchTerms": [
+          "드레스 룸",
+          "美容欄 篩選",
+          "外觀箭頭切換"
+        ]
+      },
+      {
+        "title": "染色加速並新增連續染色功能",
+        "category": "minor",
+        "groupId": null,
+        "existingId": null,
+        "releaseDate": "2026-11-12",
+        "quote": "2026년 11월 12일(목) 패치로 변경되는 항목을 안내드립니다. / 염색 시간이 2초 → 1초로 줄어들며, 연속 염색 기능이 추가됩니다.",
+        "twSearchTerms": [
+          "連續染色",
+          "染色時間"
+        ]
+      },
+      {
+        "title": "生產材料堆疊上限與袋子容量擴充",
+        "category": "minor",
+        "groupId": null,
+        "existingId": null,
+        "releaseDate": "2026-11-12",
+        "quote": "2026년 11월 12일(목) 패치로 변경되는 항목을 안내드립니다. / 생산에 사용되는 재료 아이템 중 최대 번들 수가 100개 미만인 아이템의 최대 번들 수가 100개로 변경되며, 주머니의 용량도 함께 확장됩니다.",
+        "twSearchTerms": [
+          "生產材料 堆疊上限",
+          "주머니 용량 확장",
+          "生產袋子容量"
+        ]
+      },
+      {
+        "title": "同種類袋子可互相移轉袋內物品",
+        "category": "minor",
+        "groupId": null,
+        "existingId": null,
+        "releaseDate": "2026-11-12",
+        "quote": "2026년 11월 12일(목) 패치로 변경되는 항목을 안내드립니다. / 같은 종류의 아이템을 담는 주머니끼리는 담을 수 있는 용량이 다르더라도 겹치기를 통해 들어 있는 아이템을 옮길 수 있게 변경됩니다.",
+        "twSearchTerms": [
+          "袋子之間移轉物品",
+          "주머니 겹치기",
+          "同種類袋子"
+        ]
+      },
+      {
+        "title": "遠端修理處理速度改善",
+        "category": "minor",
+        "groupId": null,
+        "existingId": null,
+        "releaseDate": "2026-11-12",
+        "quote": "2026년 11월 12일(목) 패치로 변경되는 항목을 안내드립니다. / 원격 수리 이용 시 처리 속도가 개선됩니다.",
+        "twSearchTerms": [
+          "遠端修理",
+          "원격 수리 처리 속도"
+        ]
+      },
+      {
+        "title": "G28《暮色的殘虛》第2部前置任務解除每日次數限制",
+        "category": "minor",
+        "groupId": "g28-part2",
+        "existingId": null,
+        "releaseDate": "2026-11-12",
+        "quote": "2026년 11월 12일(목) 패치로 변경되는 항목을 안내드립니다. / G28 황혼의 잔허 2부 선행 퀘스트인 [황혼의 도시로 내딛는 한 걸음]을 일일 제한 없이 진행할 수 있도록 개선됩니다.",
+        "twSearchTerms": [
+          "G28 황혼의 잔허 2부",
+          "황혼의 도시로 내딛는 한 걸음",
+          "G28 前置任務 每日限制"
+        ]
+      }
+    ],
+    "twFingerprint": "7e1d746b414e52b882303b49b91444f8467c3d1890c547a5ae7a15b4d3ce10b9"
   }
 }
