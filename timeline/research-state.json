@@ -207,5 +207,10 @@
   },
   "server-performance:4453ae281c84386868d1a86a9d305c05702ac14c335e1913061e8feb3b3342ac": {
     "status": "pending"
+  },
+  "https://mabinogi.nexon.com/page/news/notice_view.asp?id=4893946": {
+    "digest": "e96983c2db3919d013f59c7cc531c54b1f4b97a9506345fa57fc717f21e779f4",
+    "features": [],
+    "twFingerprint": "4453ae281c84386868d1a86a9d305c05702ac14c335e1913061e8feb3b3342ac"
   }
 }
